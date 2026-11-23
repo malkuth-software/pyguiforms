@@ -1,0 +1,2663 @@
+/* Generated from gui_forms manifests/abi/gf_abi.json by `python3 tools/abi_python.py cdef`. Do not edit. */
+typedef int32_t gf_status;
+typedef uint32_t gf_table_id;
+typedef uint64_t gf_object;
+typedef uint64_t gf_splashscreen;
+typedef uint32_t gf_object_state;
+typedef uint32_t gf_value_kind;
+typedef uint32_t gf_font_role;
+typedef uint32_t gf_event_field_flags;
+typedef uint64_t gf_subscription;
+typedef uint32_t gf_create_flags;
+typedef uint32_t gf_run_flags;
+typedef uint32_t gf_owned_window_flags;
+typedef uint32_t gf_dialog_result_code;
+typedef uint32_t gf_window_property_flags;
+typedef uint32_t gf_window_band_full_screen;
+typedef uint32_t gf_window_band_flags;
+typedef uint32_t gf_window_band_state;
+typedef uint32_t gf_window_band_role;
+typedef uint32_t gf_window_band_appearance_flags;
+typedef uint32_t gf_window_band_texture;
+typedef uint32_t gf_window_band_status;
+typedef uint32_t gf_window_corner_preference;
+typedef uint32_t gf_window_shaping_flags;
+typedef uint32_t gf_mdi_layout;
+typedef uint32_t gf_schema_kind;
+typedef uint32_t gf_schema_vocabulary;
+typedef uint32_t gf_schema_property_flags;
+typedef uint32_t gf_schema_serialization;
+typedef uint32_t gf_schema_parameter_kind;
+typedef uint32_t gf_schema_primitive_list;
+typedef uint32_t gf_schema_effect_time_model;
+typedef uint32_t gf_schema_effect_input;
+typedef uint32_t gf_schema_effect_flags;
+typedef uint32_t gf_theme_outcome;
+typedef uint32_t gf_user_theme_policy;
+typedef uint32_t gf_theme_request_outcome;
+typedef uint32_t gf_theme_severity;
+typedef uint32_t gf_theme_diagnostic_text;
+typedef uint64_t gf_host_capability;
+typedef uint32_t gf_window_corner_shape;
+typedef uint32_t gf_transient_surface_kind;
+typedef uint32_t gf_pointer_cursor;
+typedef uint32_t gf_dialog_kind;
+typedef uint32_t gf_message_buttons;
+typedef uint32_t gf_message_icon;
+typedef uint32_t gf_dialog_choice;
+typedef uint32_t gf_dialog_flags;
+typedef uint32_t gf_dialog_outcome;
+typedef uint32_t gf_shadow_frame_kind;
+typedef uint32_t gf_shadow_frame_flags;
+typedef uint32_t gf_failure_detail_flags;
+typedef uint32_t gf_scroll_orientation;
+typedef uint32_t gf_relative_pointer_mode;
+typedef uint32_t gf_relative_pointer_result;
+typedef uint32_t gf_relative_pointer_end;
+typedef uint32_t gf_effect_mask_mode;
+typedef uint32_t gf_effect_mask_composite;
+typedef uint32_t gf_text_ink_role;
+typedef uint32_t gf_text_underline;
+typedef uint32_t gf_text_decoration_fields;
+typedef uint32_t gf_anchored_overlay_flags;
+typedef uint32_t gf_tool_tips_setting;
+typedef uint32_t gf_custom_base;
+typedef uint32_t gf_custom_control_flags;
+typedef uint32_t gf_custom_property_flags;
+typedef uint32_t gf_source_update_mode;
+typedef uint32_t gf_control_update_mode;
+typedef uint32_t gf_binding_sort_direction;
+typedef uint32_t gf_binding_predicate_operator;
+typedef uint32_t gf_binding_notification_kind;
+typedef uint32_t gf_binding_provider_flags;
+typedef uint32_t gf_subsurface_state;
+typedef uint32_t gf_theme_base;
+typedef uint32_t gf_presentation_source;
+typedef uint32_t gf_application_state;
+typedef uint32_t gf_rule_trigger_kind;
+typedef uint32_t gf_rule_condition_kind;
+typedef uint32_t gf_rule_action_kind;
+typedef uint32_t gf_rule_flags;
+typedef uint32_t gf_rule_state;
+typedef uint64_t gf_rule_token;
+typedef uint32_t gf_data_grid_column_kind;
+typedef uint32_t gf_dock_panel_kind;
+typedef uint32_t gf_dock_placement;
+typedef uint32_t gf_dock_side;
+typedef uint32_t gf_dock_node_kind;
+typedef uint32_t gf_dock_allowed;
+typedef uint32_t gf_dock_option_flags;
+typedef uint32_t gf_dock_window_visibility;
+typedef uint32_t gf_dock_edit_kind;
+typedef uint32_t gf_dock_document_presentation;
+typedef uint32_t gf_dock_frame_state;
+typedef uint32_t gf_dock_frame_arrangement;
+typedef uint32_t gf_dock_refusal;
+typedef uint32_t gf_help_navigator;
+typedef uint32_t gf_locale_field;
+typedef uint32_t gf_locale_origin;
+typedef uint64_t gf_content_sink;
+typedef uint32_t gf_content_status;
+typedef uint32_t gf_content_publish_result;
+typedef uint32_t gf_content_semantics_result;
+typedef uint32_t gf_content_layout_result;
+typedef uint32_t gf_content_pixel_format;
+typedef uint32_t gf_hosted_support;
+typedef uint32_t gf_list_view_alignment;
+typedef uint32_t gf_list_view_sort_order;
+typedef uint64_t gf_paint_endpoint;
+typedef uint64_t gf_paint_write_lease;
+typedef uint32_t gf_class_id;
+#define GF_ABI_MAJOR 1u
+#define GF_ABI_MINOR 6u
+#define GF_STATUS_OK 0
+#define GF_STATUS_INVALID_ARGUMENT 1
+#define GF_STATUS_STALE_HANDLE 2
+#define GF_STATUS_WRONG_HANDLE_KIND 3
+#define GF_STATUS_WRONG_THREAD 4
+#define GF_STATUS_DISPOSED 5
+#define GF_STATUS_BUFFER_TOO_SMALL 6
+#define GF_STATUS_UNSUPPORTED_VERSION 7
+#define GF_STATUS_INTERNAL 8
+#define GF_STATUS_OUT_OF_MEMORY 9
+#define GF_STATUS_UNSUPPORTED_CAPABILITY 10
+#define GF_STATUS_NOT_FOUND 11
+#define GF_STATUS_INVALID_STATE 12
+#define GF_STATUS_LIMIT_EXCEEDED 13
+#define GF_STATUS_CANCELLED 14
+#define GF_STATUS_REMOVED 15
+#define GF_STATUS_NATIVE_EXCEPTION 16
+#define GF_TABLE_RUNTIME 1u
+#define GF_TABLE_OBJECTS 2u
+#define GF_TABLE_PROPERTIES 3u
+#define GF_TABLE_EVENTS 4u
+#define GF_TABLE_DISPATCH 5u
+#define GF_TABLE_WINDOWS 6u
+#define GF_TABLE_SCHEMA 7u
+#define GF_TABLE_THEMES 8u
+#define GF_TABLE_HOST 9u
+#define GF_TABLE_DIAGNOSTICS 10u
+#define GF_TABLE_CONTROLS 11u
+#define GF_TABLE_TEXT_EDITING 12u
+#define GF_TABLE_OVERLAYS 13u
+#define GF_TABLE_PROPERTY_GRID 14u
+#define GF_TABLE_CUSTOM_CONTROLS 15u
+#define GF_TABLE_BINDINGS 16u
+#define GF_TABLE_SUBSURFACES 17u
+#define GF_TABLE_APPLICATION 18u
+#define GF_TABLE_RULES 19u
+#define GF_TABLE_DATA_GRID 20u
+#define GF_TABLE_DOCKING 21u
+#define GF_TABLE_FONTS 22u
+#define GF_TABLE_HELP 23u
+#define GF_TABLE_CLASSES 24u
+#define GF_TABLE_CONTENT 25u
+#define GF_TABLE_LIST_VIEW 26u
+#define GF_TABLE_WINDOWS_PAINT_ENDPOINT 256u
+#define GF_ABI_ENTRY_SLOT 4294967295u
+#define GF_SPLASHSCREEN_MAXIMUM_STATUS_BYTES 512u
+#define GF_SPLASHSCREEN_MINIMUM_EXTENT 160u
+#define GF_SPLASHSCREEN_MAXIMUM_EXTENT 1600u
+#define GF_OBJECT_STATE_ALIVE 0u
+#define GF_OBJECT_STATE_DISPOSING 1u
+#define GF_OBJECT_STATE_DISPOSED 2u
+#define GF_VALUE_KIND_NULL 0u
+#define GF_VALUE_KIND_BOOLEAN 1u
+#define GF_VALUE_KIND_SIGNED 2u
+#define GF_VALUE_KIND_UNSIGNED 3u
+#define GF_VALUE_KIND_NUMBER 4u
+#define GF_VALUE_KIND_TEXT 5u
+#define GF_VALUE_KIND_POINT 6u
+#define GF_VALUE_KIND_SIZE 7u
+#define GF_VALUE_KIND_RECTANGLE 8u
+#define GF_VALUE_KIND_INSETS 9u
+#define GF_VALUE_KIND_COLOR 10u
+#define GF_VALUE_KIND_FONT 11u
+#define GF_VALUE_KIND_IMAGE 12u
+#define GF_VALUE_KIND_ENUMERATION 13u
+#define GF_VALUE_KIND_OBJECT 14u
+#define GF_VALUE_KIND_COLLECTION 15u
+#define GF_FONT_ROLE_CONTROL 0u
+#define GF_FONT_ROLE_CONTENT 1u
+#define GF_FONT_ROLE_MONOSPACE 2u
+#define GF_EVENT_FIELD_WRITABLE 1u
+#define GF_EVENT_FIELD_OPTIONAL 2u
+#define GF_EVENT_FIELD_ANY_KIND 4u
+#define GF_CREATE_FLAGS_COMBINABLE 1u
+#define GF_CREATE_MAXIMUM_CHOICES 256u
+#define GF_CREATE_MAXIMUM_NAME_BYTES 256u
+#define GF_PROPERTY_MAXIMUM_ELEMENTS_PER_CALL 65536u
+#define GF_RUN_FLAGS_NONE 0u
+#define GF_OWNED_WINDOW_FLAGS_NONE 0u
+#define GF_OWNED_WINDOW_TOOL 1u
+#define GF_DIALOG_RESULT_NONE 0u
+#define GF_DIALOG_RESULT_OK 1u
+#define GF_DIALOG_RESULT_CANCEL 2u
+#define GF_DIALOG_RESULT_ABORT 3u
+#define GF_DIALOG_RESULT_RETRY 4u
+#define GF_DIALOG_RESULT_IGNORE 5u
+#define GF_DIALOG_RESULT_YES 6u
+#define GF_DIALOG_RESULT_NO 7u
+#define GF_DIALOG_RESULT_TRY_AGAIN 10u
+#define GF_DIALOG_RESULT_CONTINUE 11u
+#define GF_WINDOW_PROPERTY_TEXT 1u
+#define GF_WINDOW_PROPERTY_ICON 2u
+#define GF_WINDOW_PROPERTY_FORM_BORDER_STYLE 4u
+#define GF_WINDOW_PROPERTY_MINIMIZE_BOX 8u
+#define GF_WINDOW_PROPERTY_MAXIMIZE_BOX 16u
+#define GF_WINDOW_PROPERTY_CONTROL_BOX 32u
+#define GF_WINDOW_PROPERTY_WINDOW_STATE 64u
+#define GF_WINDOW_PROPERTY_TOP_MOST 128u
+#define GF_WINDOW_PROPERTY_OPACITY 256u
+#define GF_WINDOW_PROPERTY_START_POSITION 512u
+#define GF_WINDOW_PROPERTY_SHOW_IN_TASKBAR 1024u
+#define GF_WINDOW_PROPERTY_MINIMUM_SIZE 2048u
+#define GF_WINDOW_BAND_FULL_SCREEN_STAYS 0u
+#define GF_WINDOW_BAND_FULL_SCREEN_HIDES 1u
+#define GF_WINDOW_BAND_PER_EDGE 1u
+#define GF_WINDOW_BAND_STATE_REST 0u
+#define GF_WINDOW_BAND_STATE_LIT 1u
+#define GF_WINDOW_BAND_STATE_FLASHING 2u
+#define GF_WINDOW_BAND_STATE_CYCLING 3u
+#define GF_WINDOW_BAND_ROLE_THEME 0u
+#define GF_WINDOW_BAND_ROLE_FOCUS 1u
+#define GF_WINDOW_BAND_ROLE_ACCENT 2u
+#define GF_WINDOW_BAND_ROLE_ACCENT_LIGHT 3u
+#define GF_WINDOW_BAND_ROLE_TEXT 4u
+#define GF_WINDOW_BAND_ROLE_BORDER 5u
+#define GF_WINDOW_BAND_REST_COLOUR 1u
+#define GF_WINDOW_BAND_LIT_COLOUR 2u
+#define GF_WINDOW_BAND_TEXTURE_NONE 0u
+#define GF_WINDOW_BAND_TEXTURE_PROCEDURAL 1u
+#define GF_WINDOW_BAND_TEXTURE_FINISH 2u
+#define GF_PROCEDURAL_PATTERN_FELT 0u
+#define GF_PROCEDURAL_PATTERN_WOOD_GRAIN 1u
+#define GF_PROCEDURAL_PATTERN_PAPER_FIBRE 2u
+#define GF_PROCEDURAL_PATTERN_PINSTRIPE 3u
+#define GF_PROCEDURAL_PATTERN_BRUSHED_METAL 4u
+#define GF_PROCEDURAL_PATTERN_FRESCO 5u
+#define GF_PROCEDURAL_PATTERN_CHECKER 6u
+#define GF_PROCEDURAL_PATTERN_HATCH 7u
+#define GF_PROCEDURAL_PATTERN_CARBON_FIBRE 8u
+#define GF_HATCH_STYLE_HORIZONTAL 0u
+#define GF_HATCH_STYLE_VERTICAL 1u
+#define GF_HATCH_STYLE_FORWARD_DIAGONAL 2u
+#define GF_HATCH_STYLE_BACKWARD_DIAGONAL 3u
+#define GF_HATCH_STYLE_CROSS 4u
+#define GF_HATCH_STYLE_DIAGONAL_CROSS 5u
+#define GF_FINISH_DUSTY_MATTE 0u
+#define GF_FINISH_ORANGE_PEEL 1u
+#define GF_FINISH_HAMMERTONE 2u
+#define GF_FINISH_WRINKLE 3u
+#define GF_FINISH_BEAD_BLAST 4u
+#define GF_FINISH_SAND_CAST 5u
+#define GF_FINISH_FLAT 6u
+#define GF_FINISH_CLOTH_WEAVE 7u
+#define GF_WINDOW_BAND_DECLARED 1u
+#define GF_WINDOW_BAND_RESERVED 2u
+#define GF_WINDOW_BAND_FLASHING 4u
+#define GF_WINDOW_BAND_CYCLING 8u
+#define GF_WINDOW_BAND_TEXTURED 16u
+#define GF_WINDOW_CORNER_PREFERENCE_SYSTEM 0u
+#define GF_WINDOW_CORNER_PREFERENCE_SQUARE 1u
+#define GF_WINDOW_CORNER_PREFERENCE_ROUND 2u
+#define GF_WINDOW_SHAPING_HOST_ATTACHED 1u
+#define GF_WINDOW_SHAPING_CORNERS_REPORTED 2u
+#define GF_WINDOW_SHAPING_STATE_REPORTED 4u
+#define GF_WINDOW_SHAPING_NATIVE_BORDER 8u
+#define GF_WINDOW_SHAPING_FULL_SCREEN 16u
+#define GF_WINDOW_SHAPING_COMPLIED 32u
+#define GF_MDI_LAYOUT_CASCADE 0u
+#define GF_MDI_LAYOUT_TILE_HORIZONTAL 1u
+#define GF_MDI_LAYOUT_TILE_VERTICAL 2u
+#define GF_MDI_LAYOUT_ARRANGE_ICONS 3u
+#define GF_SCHEMA_KIND_CONTROL 0u
+#define GF_SCHEMA_KIND_COMPONENT 1u
+#define GF_SCHEMA_KIND_SERVICE 2u
+#define GF_SCHEMA_KIND_DEFINED_CONTROL 3u
+#define GF_SCHEMA_VOCABULARY_PART_ROLES 0u
+#define GF_SCHEMA_VOCABULARY_STATES 1u
+#define GF_SCHEMA_VOCABULARY_CUSTOM_STATES 2u
+#define GF_SCHEMA_VOCABULARY_MARKS 3u
+#define GF_SCHEMA_VOCABULARY_ENGINE_INPUTS 4u
+#define GF_SCHEMA_VOCABULARY_VALUES 5u
+#define GF_SCHEMA_VOCABULARY_FAMILIES 6u
+#define GF_SCHEMA_VOCABULARY_SEMANTIC_ROLES 7u
+#define GF_SCHEMA_VOCABULARY_SEMANTIC_ACTIONS 8u
+#define GF_SCHEMA_VOCABULARY_SEMANTIC_STATES 9u
+#define GF_SCHEMA_VOCABULARY_SEMANTIC_FIELDS 10u
+#define GF_SCHEMA_VOCABULARY_CASCADE_LEVELS 11u
+#define GF_SCHEMA_VOCABULARY_EXPRESSION_OPERATIONS 12u
+#define GF_SCHEMA_VOCABULARY_ENGINE_PROPERTIES 13u
+#define GF_SCHEMA_NONE 18446744073709551615ull
+#define GF_SCHEMA_PROPERTY_FLAGS_READABLE 1u
+#define GF_SCHEMA_PROPERTY_FLAGS_WRITABLE 2u
+#define GF_SCHEMA_PROPERTY_FLAGS_BINDABLE 4u
+#define GF_SCHEMA_PROPERTY_FLAGS_NULLABLE 8u
+#define GF_SCHEMA_SERIALIZATION_HIDDEN 0u
+#define GF_SCHEMA_SERIALIZATION_VISIBLE 1u
+#define GF_SCHEMA_SERIALIZATION_CONTENT 2u
+#define GF_SCHEMA_PARAMETER_KIND_NUMBER 0u
+#define GF_SCHEMA_PARAMETER_KIND_CHOICE 1u
+#define GF_SCHEMA_PARAMETER_KIND_COLOR 2u
+#define GF_SCHEMA_PRIMITIVE_LIST_ROLES 0u
+#define GF_SCHEMA_PRIMITIVE_LIST_STATES_READ 1u
+#define GF_SCHEMA_PRIMITIVE_LIST_INPUTS_READ 2u
+#define GF_SCHEMA_EFFECT_TIME_MODEL_STATIC_POSE 0u
+#define GF_SCHEMA_EFFECT_TIME_MODEL_TRANSITION 1u
+#define GF_SCHEMA_EFFECT_TIME_MODEL_AMBIENT 2u
+#define GF_SCHEMA_EFFECT_INPUT_NONE 0u
+#define GF_SCHEMA_EFFECT_INPUT_POINTER 1u
+#define GF_SCHEMA_EFFECT_INPUT_POINTER_AND_KEYS 2u
+#define GF_SCHEMA_EFFECT_FLAGS_VERIFIED 1u
+#define GF_SCHEMA_EFFECT_FLAGS_SETUP_ON_GEOMETRY 2u
+#define GF_THEME_PACKAGE_MAXIMUM_FILES 256u
+#define GF_THEME_PACKAGE_MAXIMUM_BYTES 16777216u
+#define GF_THEME_MAXIMUM_PUBLISHED_VALUES 256u
+#define GF_THEME_OUTCOME_APPLIED 0u
+#define GF_THEME_OUTCOME_REFUSED 1u
+#define GF_USER_THEME_POLICY_LAYERED 0u
+#define GF_USER_THEME_POLICY_REPLACES_PROGRAM_SHEET 1u
+#define GF_USER_THEME_POLICY_REFUSED 2u
+#define GF_THEME_REQUEST_NONE 0u
+#define GF_THEME_REQUEST_PENDING 1u
+#define GF_THEME_REQUEST_BUILT_IN 2u
+#define GF_THEME_REQUEST_APPLIED 3u
+#define GF_THEME_REQUEST_IGNORED_BY_POLICY 4u
+#define GF_THEME_REQUEST_UNKNOWN_NAME 5u
+#define GF_THEME_REQUEST_REFUSED 6u
+#define GF_THEME_REQUEST_UNREADABLE 7u
+#define GF_THEME_REQUEST_MALFORMED 8u
+#define GF_THEME_SEVERITY_ERROR 0u
+#define GF_THEME_SEVERITY_WARNING 1u
+#define GF_THEME_DIAGNOSTIC_TEXT_CODE 0u
+#define GF_THEME_DIAGNOSTIC_TEXT_NAME 1u
+#define GF_THEME_DIAGNOSTIC_TEXT_FILE 2u
+#define GF_THEME_DIAGNOSTIC_TEXT_RULE 3u
+#define GF_THEME_DIAGNOSTIC_TEXT_PROPERTY 4u
+#define GF_THEME_DIAGNOSTIC_TEXT_DETAIL 5u
+#define GF_HOST_CAPABILITY_LIFECYCLE 1ull
+#define GF_HOST_CAPABILITY_SCALE_NOTIFICATIONS 2ull
+#define GF_HOST_CAPABILITY_MONITOR_GEOMETRY 4ull
+#define GF_HOST_CAPABILITY_OCCLUSION 8ull
+#define GF_HOST_CAPABILITY_SCHEDULED_WAKE 16ull
+#define GF_HOST_CAPABILITY_POINTER_INPUT 32ull
+#define GF_HOST_CAPABILITY_KEYBOARD_INPUT 64ull
+#define GF_HOST_CAPABILITY_TEXT_COMPOSITION 128ull
+#define GF_HOST_CAPABILITY_POINTER_CAPTURE 256ull
+#define GF_HOST_CAPABILITY_CURSOR 512ull
+#define GF_HOST_CAPABILITY_CLIPBOARD 1024ull
+#define GF_HOST_CAPABILITY_TYPED_DRAG_DESTINATION 2048ull
+#define GF_HOST_CAPABILITY_DIALOGS 4096ull
+#define GF_HOST_CAPABILITY_MENUS 8192ull
+#define GF_HOST_CAPABILITY_FONT_DISCOVERY 16384ull
+#define GF_HOST_CAPABILITY_ACCESSIBILITY 32768ull
+#define GF_HOST_CAPABILITY_TYPED_DRAG_SOURCE 65536ull
+#define GF_HOST_CAPABILITY_SOUND_CUES 131072ull
+#define GF_HOST_CAPABILITY_CLIPBOARD_IMAGES 262144ull
+#define GF_HOST_CAPABILITY_FRAME_CAPTURE 524288ull
+#define GF_HOST_CAPABILITY_NOTIFICATION_AREA 1048576ull
+#define GF_HOST_CAPABILITY_NOTIFICATION_AREA_MESSAGES 2097152ull
+#define GF_HOST_CAPABILITY_NOTIFICATION_AREA_MENUS 4194304ull
+#define GF_HOST_CAPABILITY_RUNTIME_WINDOWS 8388608ull
+#define GF_HOST_CAPABILITY_WINDOW_FRAMES 16777216ull
+#define GF_HOST_CAPABILITY_SCREEN_POINTER 33554432ull
+#define GF_HOST_CAPABILITY_WINDOW_AT_POINT 67108864ull
+#define GF_HOST_CAPABILITY_WINDOW_ORDERING 134217728ull
+#define GF_HOST_CAPABILITY_TRANSPARENT_WINDOWS 268435456ull
+#define GF_HOST_CAPABILITY_WINDOW_BACKDROPS 536870912ull
+#define GF_HOST_CAPABILITY_COMPOSITOR_NOTIFICATIONS 1073741824ull
+#define GF_HOST_CAPABILITY_PRESENTATION_PREFERENCES 2147483648ull
+#define GF_HOST_CAPABILITY_WINDOWS_PAINT_ENDPOINT 4294967296ull
+#define GF_HOST_CAPABILITY_TRANSIENT_SURFACES 8589934592ull
+#define GF_HOST_CAPABILITY_WINDOW_CORNERS 17179869184ull
+#define GF_HOST_CAPABILITY_WINDOW_STATE_REPORTS 34359738368ull
+#define GF_HOST_CAPABILITY_HOSTED_CONTENT 68719476736ull
+#define GF_HOST_CAPABILITY_RELATIVE_POINTER 137438953472ull
+#define GF_HOST_CAPABILITY_RAW_POINTER_MOTION 274877906944ull
+#define GF_HOST_CAPABILITY_POINTER_CONFINEMENT 549755813888ull
+#define GF_HOST_CAPABILITY_POINTER_WARP 1099511627776ull
+#define GF_HOST_CAPABILITY_OPEN_URL 2199023255552ull
+#define GF_HOST_CAPABILITY_DIRECT_BUFFERS 8796093022208ull
+#define GF_HOST_CAPABILITY_HOST_SCROLL 17592186044416ull
+#define GF_HOST_CAPABILITY_REFERENCE_PRESENTATION 35184372088832ull
+#define GF_WINDOW_CORNER_SHAPE_SQUARE 1u
+#define GF_WINDOW_CORNER_SHAPE_ROUNDED 2u
+#define GF_TRANSIENT_SURFACE_TOOLTIP 1u
+#define GF_TRANSIENT_SURFACE_SPLASHSCREEN 2u
+#define GF_TRANSIENT_SURFACE_POPUP 4u
+#define GF_TRANSIENT_SURFACE_TRANSLUCENT 8u
+#define GF_TRANSIENT_SURFACE_OPAQUE 16u
+#define GF_POINTER_CURSOR_ARROW 0u
+#define GF_POINTER_CURSOR_TEXT 1u
+#define GF_POINTER_CURSOR_HAND 2u
+#define GF_POINTER_CURSOR_CROSSHAIR 3u
+#define GF_POINTER_CURSOR_RESIZE_HORIZONTAL 4u
+#define GF_POINTER_CURSOR_RESIZE_VERTICAL 5u
+#define GF_POINTER_CURSOR_WAIT 6u
+#define GF_POINTER_CURSOR_FORBIDDEN 7u
+#define GF_POINTER_CURSOR_RESIZE_DIAGONAL_DOWN 8u
+#define GF_POINTER_CURSOR_RESIZE_DIAGONAL_UP 9u
+#define GF_POINTER_CURSOR_HELP 10u
+#define GF_DIALOG_KIND_MESSAGE 0u
+#define GF_DIALOG_KIND_OPEN_FILE 1u
+#define GF_DIALOG_KIND_SAVE_FILE 2u
+#define GF_DIALOG_KIND_FOLDER 3u
+#define GF_DIALOG_KIND_COLOR 4u
+#define GF_MESSAGE_BUTTONS_OK 0u
+#define GF_MESSAGE_BUTTONS_OK_CANCEL 1u
+#define GF_MESSAGE_BUTTONS_YES_NO 2u
+#define GF_MESSAGE_BUTTONS_YES_NO_CANCEL 3u
+#define GF_MESSAGE_BUTTONS_RETRY_CANCEL 4u
+#define GF_MESSAGE_ICON_NONE 0u
+#define GF_MESSAGE_ICON_INFORMATION 1u
+#define GF_MESSAGE_ICON_WARNING 2u
+#define GF_MESSAGE_ICON_ERROR 3u
+#define GF_MESSAGE_ICON_QUESTION 4u
+#define GF_DIALOG_CHOICE_NONE 0u
+#define GF_DIALOG_CHOICE_OK 1u
+#define GF_DIALOG_CHOICE_CANCEL 2u
+#define GF_DIALOG_CHOICE_YES 3u
+#define GF_DIALOG_CHOICE_NO 4u
+#define GF_DIALOG_CHOICE_RETRY 5u
+#define GF_DIALOG_FLAGS_NONE 0u
+#define GF_DIALOG_FLAGS_ALLOW_MULTIPLE 1u
+#define GF_DIALOG_FLAGS_CONFIRM_OVERWRITE 2u
+#define GF_DIALOG_FLAGS_ALLOW_ALPHA 4u
+#define GF_DIALOG_FLAGS_ALLOW_MISSING_FILE 8u
+#define GF_DIALOG_FLAGS_REQUIRE_EXISTING_FILE 16u
+#define GF_DIALOG_FLAGS_ALLOW_MISSING_FOLDER 32u
+#define GF_DIALOG_FLAGS_CREATE_PROMPT 64u
+#define GF_DIALOG_OUTCOME_ACCEPTED 0u
+#define GF_DIALOG_OUTCOME_CANCELLED 1u
+#define GF_DIALOG_NO_FILTER 18446744073709551615ull
+#define GF_SHADOW_FRAME_KIND_LIBRARY_CALL 1u
+#define GF_SHADOW_FRAME_KIND_INPUT_DISPATCH 2u
+#define GF_SHADOW_FRAME_KIND_EVENT_CALLBACK 3u
+#define GF_SHADOW_FRAME_KIND_LAYOUT_PASS 4u
+#define GF_SHADOW_FRAME_KIND_PAINT_PASS 5u
+#define GF_SHADOW_FRAME_KIND_POSTED_CALLBACK 6u
+#define GF_SHADOW_FRAME_KIND_GATE 7u
+#define GF_SHADOW_FRAME_SUBJECT_TRUNCATED 1u
+#define GF_SHADOW_FRAME_NAME_TRUNCATED 2u
+#define GF_SHADOW_FRAME_SUBJECT_CAPACITY 48u
+#define GF_SHADOW_FRAME_NAME_CAPACITY 32u
+#define GF_SHADOW_STACK_CAPACITY 64u
+#define GF_FAILURE_SITE_CAPACITY 64u
+#define GF_FAILURE_MESSAGE_CAPACITY 512u
+#define GF_FAILURE_TYPE_CAPACITY 256u
+#define GF_FAILURE_TRACE_CAPACITY 32u
+#define GF_FAILURE_DETAIL_FLAGS_NONE 0u
+#define GF_FAILURE_DETAIL_FLAGS_FRAMES_LOST_AT_PARK 1u
+#define GF_SCROLL_ORIENTATION_HORIZONTAL 0u
+#define GF_SCROLL_ORIENTATION_VERTICAL 1u
+#define GF_RELATIVE_POINTER_MODE_FREE 0u
+#define GF_RELATIVE_POINTER_MODE_CONFINED 1u
+#define GF_RELATIVE_POINTER_MODE_LOCKED 2u
+#define GF_RELATIVE_POINTER_RESULT_GRANTED 0u
+#define GF_RELATIVE_POINTER_RESULT_DEGRADED 1u
+#define GF_RELATIVE_POINTER_RESULT_DETACHED 2u
+#define GF_RELATIVE_POINTER_RESULT_NOT_ACTIVE 3u
+#define GF_RELATIVE_POINTER_RESULT_NO_PRESS 4u
+#define GF_RELATIVE_POINTER_RESULT_INVALID_REQUEST 5u
+#define GF_RELATIVE_POINTER_END_RELEASED 0u
+#define GF_RELATIVE_POINTER_END_ESCAPE 1u
+#define GF_RELATIVE_POINTER_END_FOCUS_LOST 2u
+#define GF_RELATIVE_POINTER_END_DEACTIVATED 3u
+#define GF_RELATIVE_POINTER_END_MODAL 4u
+#define GF_RELATIVE_POINTER_END_DETACHED 5u
+#define GF_RELATIVE_POINTER_END_PRESS_RELEASED 6u
+#define GF_RELATIVE_POINTER_END_SUPERSEDED 7u
+#define GF_EFFECT_MASK_MODE_ALPHA 0u
+#define GF_EFFECT_MASK_MODE_LUMINANCE 1u
+#define GF_EFFECT_MASK_MODE_INVERSE_ALPHA 2u
+#define GF_EFFECT_MASK_MODE_INVERSE_LUMINANCE 3u
+#define GF_EFFECT_MASK_COMPOSITE_ADD 0u
+#define GF_EFFECT_MASK_COMPOSITE_SUBTRACT 1u
+#define GF_EFFECT_MASK_COMPOSITE_INTERSECT 2u
+#define GF_EFFECT_MASK_COMPOSITE_EXCLUDE 3u
+#define GF_CONTENT_EFFECT_MAXIMUM_MASKS 4u
+#define GF_CONTENT_EFFECT_MAXIMUM_BLUR 16u
+#define GF_TEXT_INK_ROLE_TEXT 0u
+#define GF_TEXT_INK_ROLE_MUTED 1u
+#define GF_TEXT_INK_ROLE_LINK 2u
+#define GF_TEXT_INK_ROLE_VISITED_LINK 3u
+#define GF_TEXT_INK_ROLE_NOTICE 4u
+#define GF_TEXT_UNDERLINE_NONE 0u
+#define GF_TEXT_UNDERLINE_SINGLE 1u
+#define GF_TEXT_UNDERLINE_SQUIGGLE 2u
+#define GF_TEXT_DECORATION_INK 1u
+#define GF_TEXT_DECORATION_FOREGROUND 2u
+#define GF_TEXT_DECORATION_WEIGHT 4u
+#define GF_TEXT_DECORATION_ITALIC 8u
+#define GF_TEXT_DECORATION_UNDERLINE 16u
+#define GF_TEXT_DECORATION_UNDERLINE_COLOR 32u
+#define GF_TEXT_DECORATION_BACKGROUND 64u
+#define GF_ANCHORED_OVERLAY_FLAGS_NONE 0u
+#define GF_ANCHORED_OVERLAY_ABOVE 1u
+#define GF_ANCHORED_OVERLAY_ALIGN_END 2u
+#define GF_ANCHORED_OVERLAY_NO_FLIP 4u
+#define GF_ANCHORED_OVERLAY_KEEP_ON_CLICK_AWAY 8u
+#define GF_ANCHORED_OVERLAY_KEEP_ON_ESCAPE 16u
+#define GF_ANCHORED_OVERLAY_TAKE_FOCUS 32u
+#define GF_TOOL_TIPS_FOLLOW 0u
+#define GF_TOOL_TIPS_SHOWN 1u
+#define GF_TOOL_TIPS_HIDDEN 2u
+#define GF_CUSTOM_BASE_SCROLLABLE_CONTROL 0u
+#define GF_CUSTOM_BASE_USER_CONTROL 1u
+#define GF_CUSTOM_CONTROL_FOCUSABLE 1u
+#define GF_CUSTOM_PROPERTY_READ_ONLY 1u
+#define GF_CUSTOM_PROPERTY_COMBINABLE 2u
+#define GF_CUSTOM_PROPERTY_CHANGE_NOTIFICATIONS 4u
+#define GF_CUSTOM_MAXIMUM_PROPERTIES 256u
+#define GF_COMPOSITE_MAXIMUM_CHILD_TYPES 64u
+#define GF_SOURCE_UPDATE_ON_VALIDATION 0u
+#define GF_SOURCE_UPDATE_ON_PROPERTY_CHANGED 1u
+#define GF_SOURCE_UPDATE_NEVER 2u
+#define GF_CONTROL_UPDATE_ON_PROPERTY_CHANGED 0u
+#define GF_CONTROL_UPDATE_NEVER 1u
+#define GF_BINDING_MAXIMUM_FIELDS 1024u
+#define GF_BINDING_MAXIMUM_RECORDS_PER_CALL 65536u
+#define GF_BINDING_HIDDEN_POSITION 18446744073709551615ull
+#define GF_BINDING_WHOLE_ROW 18446744073709551615ull
+#define GF_BINDING_SORT_ASCENDING 0u
+#define GF_BINDING_SORT_DESCENDING 1u
+#define GF_BINDING_PREDICATE_EQUAL 0u
+#define GF_BINDING_PREDICATE_NOT_EQUAL 1u
+#define GF_BINDING_PREDICATE_LESS 2u
+#define GF_BINDING_PREDICATE_LESS_OR_EQUAL 3u
+#define GF_BINDING_PREDICATE_GREATER 4u
+#define GF_BINDING_PREDICATE_GREATER_OR_EQUAL 5u
+#define GF_BINDING_PREDICATE_CONTAINS 6u
+#define GF_BINDING_PREDICATE_STARTS_WITH 7u
+#define GF_BINDING_PREDICATE_IS_NULL 8u
+#define GF_BINDING_PREDICATE_IS_NOT_NULL 9u
+#define GF_BINDING_NOTIFY_RESET 0u
+#define GF_BINDING_NOTIFY_INSERTED 1u
+#define GF_BINDING_NOTIFY_REMOVED 2u
+#define GF_BINDING_NOTIFY_MOVED 3u
+#define GF_BINDING_NOTIFY_CHANGED 4u
+#define GF_BINDING_PROVIDER_SORTS 1u
+#define GF_BINDING_PROVIDER_FILTERS 2u
+#define GF_BINDING_PROVIDER_INSERTS 4u
+#define GF_BINDING_PROVIDER_REMOVES 8u
+#define GF_SUBSURFACE_STATE_STOPPED 0u
+#define GF_SUBSURFACE_STATE_STARTING 1u
+#define GF_SUBSURFACE_STATE_RUNNING 2u
+#define GF_SUBSURFACE_STATE_FAILED 3u
+#define GF_THEME_BASE_DEFAULT 0u
+#define GF_THEME_BASE_WINDOWS_PROFESSIONAL 1u
+#define GF_THEME_BASE_GUI_FORMS 2u
+#define GF_PRESENTATION_SOURCE_HOST 0u
+#define GF_PRESENTATION_SOURCE_DEFAULTS 1u
+#define GF_APPLICATION_MAXIMUM_THEME_PACKAGES 16u
+#define GF_APPLICATION_STATE_NONE 0u
+#define GF_APPLICATION_STATE_CURRENT 1u
+#define GF_RULE_TRIGGER_KEY_PRESSED 1u
+#define GF_RULE_TRIGGER_KEY_RELEASED 2u
+#define GF_RULE_TRIGGER_KEY_REPEAT 3u
+#define GF_RULE_TRIGGER_MOUSE_DOWN 4u
+#define GF_RULE_TRIGGER_MOUSE_UP 5u
+#define GF_RULE_TRIGGER_CLICK 6u
+#define GF_RULE_TRIGGER_MOUSE_CLICK 7u
+#define GF_RULE_TRIGGER_DOUBLE_CLICK 8u
+#define GF_RULE_TRIGGER_MOUSE_DOUBLE_CLICK 9u
+#define GF_RULE_TRIGGER_CONTEXT_MENU_REQUESTED 10u
+#define GF_RULE_TRIGGER_MOUSE_ENTER 11u
+#define GF_RULE_TRIGGER_MOUSE_HOVER 12u
+#define GF_RULE_TRIGGER_MOUSE_LEAVE 13u
+#define GF_RULE_TRIGGER_MOUSE_CAPTURE_CHANGED 14u
+#define GF_RULE_TRIGGER_FOCUS_GAINED 15u
+#define GF_RULE_TRIGGER_FOCUS_LOST 16u
+#define GF_RULE_TRIGGER_INTERACTION 17u
+#define GF_RULE_TRIGGER_COMMAND_EXECUTED 18u
+#define GF_RULE_CONDITION_KEY_DOWN 1u
+#define GF_RULE_CONDITION_MODIFIERS 2u
+#define GF_RULE_CONDITION_HOVERING 3u
+#define GF_RULE_CONDITION_PRESSED 4u
+#define GF_RULE_CONDITION_FOCUSED 5u
+#define GF_RULE_CONDITION_FOCUS_WITHIN 6u
+#define GF_RULE_CONDITION_ENABLED 7u
+#define GF_RULE_CONDITION_VISIBLE 8u
+#define GF_RULE_CONDITION_WINDOW_ACTIVE 9u
+#define GF_RULE_CONDITION_DRAGGING 12u
+#define GF_RULE_CONDITION_DROP_CANDIDATE 13u
+#define GF_RULE_MODIFIER_SHIFT 1u
+#define GF_RULE_MODIFIER_CONTROL 2u
+#define GF_RULE_MODIFIER_ALT 4u
+#define GF_RULE_MODIFIER_META 8u
+#define GF_RULE_ACTION_CALLBACK 1u
+#define GF_RULE_ACTION_INVOKE 2u
+#define GF_RULE_ACTION_SET 3u
+#define GF_RULE_ACTION_TOGGLE 4u
+#define GF_RULE_ACTION_FOCUS 5u
+#define GF_RULE_ACTION_BEGIN_KEYBOARD_DRAG 6u
+#define GF_RULE_FLAGS_CONSUME 1u
+#define GF_RULE_STATE_ARMED 1u
+#define GF_RULE_STATE_REVOKED 2u
+#define GF_RULE_STATE_STALE 3u
+#define GF_DATA_GRID_COLUMN_KIND_TEXT 0u
+#define GF_DATA_GRID_COLUMN_KIND_CHECK_BOX 1u
+#define GF_DATA_GRID_COLUMN_KIND_COMBO_BOX 2u
+#define GF_DATA_GRID_COLUMN_KIND_BUTTON 3u
+#define GF_DATA_GRID_COLUMN_KIND_IMAGE 4u
+#define GF_DATA_GRID_COLUMN_KIND_LINK 5u
+#define GF_DATA_GRID_MAXIMUM_ROWS_PER_CALL 65536u
+#define GF_DATA_GRID_MAXIMUM_COLUMN_ITEMS 4096u
+#define GF_DOCK_PANEL_KIND_TOOL 0u
+#define GF_DOCK_PANEL_KIND_DOCUMENT 1u
+#define GF_DOCK_PLACEMENT_DOCKED 0u
+#define GF_DOCK_PLACEMENT_FLOATING 1u
+#define GF_DOCK_PLACEMENT_AUTO_HIDDEN 2u
+#define GF_DOCK_PLACEMENT_HIDDEN 3u
+#define GF_DOCK_PLACEMENT_ABSENT 4u
+#define GF_DOCK_SIDE_LEFT 0u
+#define GF_DOCK_SIDE_TOP 1u
+#define GF_DOCK_SIDE_RIGHT 2u
+#define GF_DOCK_SIDE_BOTTOM 3u
+#define GF_DOCK_SIDE_NONE 4u
+#define GF_DOCK_NODE_KIND_SPLIT 0u
+#define GF_DOCK_NODE_KIND_TOOL_STACK 1u
+#define GF_DOCK_NODE_KIND_DOCUMENT_STACK 2u
+#define GF_DOCK_NODE_KIND_DOCUMENT_AREA 3u
+#define GF_DOCK_NODE_KIND_NONE 4u
+#define GF_DOCK_ALLOWED_DOCKED 1u
+#define GF_DOCK_ALLOWED_DOCUMENT_AREA 2u
+#define GF_DOCK_ALLOWED_FLOATING 4u
+#define GF_DOCK_ALLOWED_AUTO_HIDDEN 8u
+#define GF_DOCK_ALLOWED_TABBED 16u
+#define GF_DOCK_ALLOWED_HIDDEN 32u
+#define GF_DOCK_ALLOWED_CLOSED 64u
+#define GF_DOCK_ALLOWED_SIDE_LEFT 128u
+#define GF_DOCK_ALLOWED_SIDE_TOP 256u
+#define GF_DOCK_ALLOWED_SIDE_RIGHT 512u
+#define GF_DOCK_ALLOWED_SIDE_BOTTOM 1024u
+#define GF_DOCK_ALLOWED_ALL 2047u
+#define GF_DOCK_ALLOWED_CLOSE_BUTTON_HIDDEN 2048u
+#define GF_DOCK_OPTION_FLOATS_SHOWN_WHILE_INACTIVE 1u
+#define GF_DOCK_OPTION_DOCUMENT_TABS_HIDDEN 2u
+#define GF_DOCK_OPTION_AUTO_HIDE_NO_HOVER 4u
+#define GF_DOCK_OPTION_AREA_BACKGROUND 8u
+#define GF_DOCK_OPTION_ALL 15u
+#define GF_DOCK_WINDOW_VISIBILITY_WORKSPACE 0u
+#define GF_DOCK_WINDOW_VISIBILITY_SHOWN 1u
+#define GF_DOCK_WINDOW_VISIBILITY_POLICY 2u
+#define GF_DOCK_EDIT_DOCK_INTO 0u
+#define GF_DOCK_EDIT_DOCK_BESIDE 1u
+#define GF_DOCK_EDIT_DOCK_AT_EDGE 2u
+#define GF_DOCK_EDIT_FLOAT 3u
+#define GF_DOCK_EDIT_AUTO_HIDE 4u
+#define GF_DOCK_EDIT_UNPIN 5u
+#define GF_DOCK_EDIT_HIDE 6u
+#define GF_DOCK_EDIT_SHOW 7u
+#define GF_DOCK_EDIT_CLOSE 8u
+#define GF_DOCK_EDIT_MOVE 9u
+#define GF_DOCK_EDIT_SELECT 10u
+#define GF_DOCK_EDIT_SET_RATIO 11u
+#define GF_DOCK_EDIT_SET_FLOATING_FRAME 12u
+#define GF_DOCK_EDIT_SET_DOCUMENT_PRESENTATION 13u
+#define GF_DOCK_EDIT_SET_FRAME_BOUNDS 14u
+#define GF_DOCK_EDIT_SET_FRAME_STATE 15u
+#define GF_DOCK_EDIT_SET_FRAME_ICON_SLOT 16u
+#define GF_DOCK_DOCUMENT_PRESENTATION_TABS 0u
+#define GF_DOCK_DOCUMENT_PRESENTATION_FRAMES 1u
+#define GF_DOCK_FRAME_STATE_NORMAL 0u
+#define GF_DOCK_FRAME_STATE_MINIMIZED 1u
+#define GF_DOCK_FRAME_STATE_MAXIMIZED 2u
+#define GF_DOCK_FRAME_ARRANGEMENT_CASCADE 0u
+#define GF_DOCK_FRAME_ARRANGEMENT_TILE_HORIZONTAL 1u
+#define GF_DOCK_FRAME_ARRANGEMENT_TILE_VERTICAL 2u
+#define GF_DOCK_FRAME_ARRANGEMENT_ARRANGE_ICONS 3u
+#define GF_DOCK_REFUSAL_NONE 0u
+#define GF_DOCK_REFUSAL_UNKNOWN_PANEL 1u
+#define GF_DOCK_REFUSAL_UNKNOWN_NODE 2u
+#define GF_DOCK_REFUSAL_UNKNOWN_SITE 3u
+#define GF_DOCK_REFUSAL_NOT_A_STACK 4u
+#define GF_DOCK_REFUSAL_NOT_A_SPLIT 5u
+#define GF_DOCK_REFUSAL_NOT_AUTO_HIDDEN 6u
+#define GF_DOCK_REFUSAL_TARGET_IS_SUBJECT 7u
+#define GF_DOCK_REFUSAL_INVALID_RATIO 8u
+#define GF_DOCK_REFUSAL_INVALID_FRAME 9u
+#define GF_DOCK_REFUSAL_INVALID_EXTENT 10u
+#define GF_DOCK_REFUSAL_FLOATING_SITE_LIMIT 11u
+#define GF_DOCK_REFUSAL_IDENTITIES_EXHAUSTED 12u
+#define GF_DOCK_REFUSAL_NOT_ROOT_LEVEL 13u
+#define GF_DOCK_REFUSAL_NOT_IN_MAIN_SITE 14u
+#define GF_DOCK_REFUSAL_ALREADY_PLACED 15u
+#define GF_DOCK_REFUSAL_NOT_PLACED 16u
+#define GF_DOCK_REFUSAL_INVARIANT_VIOLATED 17u
+#define GF_DOCK_REFUSAL_PLACEMENT_NOT_ALLOWED 18u
+#define GF_DOCK_REFUSAL_TABBING_NOT_ALLOWED 19u
+#define GF_DOCK_REFUSAL_KIND_MISMATCH 20u
+#define GF_DOCK_REFUSAL_GROUP_NOT_ADMITTED 21u
+#define GF_DOCK_REFUSAL_SITE_REFUSES_KIND 22u
+#define GF_DOCK_REFUSAL_SITE_REFUSES_GROUP 23u
+#define GF_DOCK_REFUSAL_USER_DOCKING_LOCKED 24u
+#define GF_APP_FONT_MAXIMUM_FACES 4u
+#define GF_APP_FONT_MAXIMUM_BYTES 67108864u
+#define GF_HELP_NAVIGATOR_CONTENTS 0u
+#define GF_HELP_NAVIGATOR_INDEX 1u
+#define GF_HELP_NAVIGATOR_SEARCH 2u
+#define GF_LOCALE_FIELD_TEXT 0u
+#define GF_LOCALE_FIELD_TOOL_TIP 1u
+#define GF_LOCALE_FIELD_ACCESS_KEY 2u
+#define GF_LOCALE_FIELD_TITLE 3u
+#define GF_LOCALE_FIELD_PLACEHOLDER 4u
+#define GF_LOCALE_FIELD_HEADER 5u
+#define GF_LOCALE_FIELD_ACCESSIBLE_NAME 6u
+#define GF_LOCALE_FIELD_ACCESSIBLE_DESCRIPTION 7u
+#define GF_LOCALE_FIELD_HELP_LINE 8u
+#define GF_LOCALE_FIELD_HELP 9u
+#define GF_LOCALE_FIELD_KEYWORDS 10u
+#define GF_LOCALE_ORIGIN_NONE 0u
+#define GF_LOCALE_ORIGIN_BUILT_IN 1u
+#define GF_LOCALE_ORIGIN_PROGRAM 2u
+#define GF_LOCALE_ORIGIN_TRANSLATION 3u
+#define GF_LOCALE_ORIGIN_USER 4u
+#define GF_CONTENT_STATUS_DISCONNECTED 0u
+#define GF_CONTENT_STATUS_WAITING 1u
+#define GF_CONTENT_STATUS_LIVE 2u
+#define GF_CONTENT_STATUS_STALE 3u
+#define GF_CONTENT_STATUS_TERMINATING 4u
+#define GF_CONTENT_STATUS_ENDED 5u
+#define GF_CONTENT_STATUS_ABANDONED 6u
+#define GF_CONTENT_STATUS_FAILED 7u
+#define GF_CONTENT_PUBLISH_PUBLISHED 0u
+#define GF_CONTENT_PUBLISH_DROPPED_BUSY 1u
+#define GF_CONTENT_PUBLISH_REVOKED 2u
+#define GF_CONTENT_PUBLISH_REFUSED_EMPTY 3u
+#define GF_CONTENT_PUBLISH_REFUSED_TOO_LARGE 4u
+#define GF_CONTENT_PUBLISH_REFUSED_ROW_BYTES 5u
+#define GF_CONTENT_PUBLISH_REFUSED_EXTENT 6u
+#define GF_CONTENT_PUBLISH_REFUSED_FORMAT 7u
+#define GF_CONTENT_PUBLISH_REFUSED_DAMAGE 8u
+#define GF_CONTENT_PUBLISH_FAILED_ALLOCATION 9u
+#define GF_CONTENT_SEMANTICS_PUBLISHED 0u
+#define GF_CONTENT_SEMANTICS_REVOKED 1u
+#define GF_CONTENT_SEMANTICS_REFUSED_INVALID_UTF8 2u
+#define GF_CONTENT_SEMANTICS_REFUSED_TOO_LONG 3u
+#define GF_CONTENT_LAYOUT_ACCEPTED 0u
+#define GF_CONTENT_LAYOUT_STALE_REVISION 1u
+#define GF_CONTENT_LAYOUT_REFUSED_TOO_LARGE 2u
+#define GF_CONTENT_LAYOUT_REFUSED_RANGE 3u
+#define GF_CONTENT_LAYOUT_REFUSED_BOUNDARY 4u
+#define GF_CONTENT_LAYOUT_REFUSED_CLUSTER 5u
+#define GF_CONTENT_LAYOUT_REFUSED_GEOMETRY 6u
+#define GF_CONTENT_LAYOUT_REFUSED_CARET 7u
+#define GF_CONTENT_PIXEL_FORMAT_BGRA32_PREMULTIPLIED_SRGB 0u
+#define GF_HOSTED_SUPPORT_AVAILABLE 0u
+#define GF_HOSTED_SUPPORT_NOT_REPORTED 1u
+#define GF_CONTENT_MAXIMUM_FRAME_EXTENT 16384u
+#define GF_CONTENT_MAXIMUM_FRAME_BYTES 268435456u
+#define GF_CONTENT_MAXIMUM_SEMANTIC_TEXT_BYTES 1048576u
+#define GF_CONTENT_MAXIMUM_LAYOUT_ENTRIES 1000000u
+#define GF_CONTENT_MAXIMUM_TERMINATION_GRACE_MS 10000u
+#define GF_CONTENT_MAXIMUM_WAIT_MS 3600000u
+#define GF_CONTENT_MAXIMUM_SINKS 65536u
+#define GF_HOSTED_MAXIMUM_ARGUMENTS 4096u
+#define GF_LIST_VIEW_ALIGNMENT_LEFT 0u
+#define GF_LIST_VIEW_ALIGNMENT_CENTER 1u
+#define GF_LIST_VIEW_ALIGNMENT_RIGHT 2u
+#define GF_LIST_VIEW_SORT_ORDER_NONE 0u
+#define GF_LIST_VIEW_SORT_ORDER_ASCENDING 1u
+#define GF_LIST_VIEW_SORT_ORDER_DESCENDING 2u
+#define GF_LIST_VIEW_MAXIMUM_COLUMNS 64u
+#define GF_LIST_VIEW_MAXIMUM_ITEMS 10000000u
+#define GF_LIST_VIEW_MAXIMUM_GROUPS 4096u
+#define GF_LIST_VIEW_MAXIMUM_SUB_ITEMS 64u
+#define GF_PAINT_ENDPOINT_MAXIMUM_SIDE 32768u
+#define GF_CLASS_COMPONENT 1u
+#define GF_CLASS_CONTROL 2u
+#define GF_CLASS_BUTTON_BASE 3u
+#define GF_CLASS_BUTTON 4u
+#define GF_CLASS_LINK_LABEL 5u
+#define GF_CLASS_LABEL 6u
+#define GF_CLASS_SCROLLABLE_CONTROL 7u
+#define GF_CLASS_PANEL 8u
+#define GF_CLASS_PICTURE_BOX 9u
+#define GF_CLASS_RANGE_CONTROL 10u
+#define GF_CLASS_PROGRESS_BAR 11u
+#define GF_CLASS_SWEEP_SCOPE 12u
+#define GF_CLASS_LIST_CONTROL 13u
+#define GF_CLASS_LIST_BOX 14u
+#define GF_CLASS_CHECK_BOX 15u
+#define GF_CLASS_RADIO_BUTTON 16u
+#define GF_CLASS_TRACK_BAR 17u
+#define GF_CLASS_GROUP_BOX 18u
+#define GF_CLASS_MATERIAL_PANEL 19u
+#define GF_CLASS_CARD 20u
+#define GF_CLASS_CONTAINER_CONTROL 21u
+#define GF_CLASS_USER_CONTROL 22u
+#define GF_CLASS_PAGE_STRIP 23u
+#define GF_CLASS_PAGE_VIEW 24u
+#define GF_CLASS_NAVIGATION_PANE 25u
+#define GF_CLASS_DOCK_SITE 26u
+#define GF_CLASS_DOCK_NAVIGATOR 27u
+#define GF_CLASS_SCALED_PANEL 28u
+#define GF_CLASS_SCROLL_BAR 29u
+#define GF_CLASS_TOOL_STRIP 30u
+#define GF_CLASS_GAUGE_BASE 31u
+#define GF_CLASS_DIAL 32u
+#define GF_CLASS_RASTER_CANVAS 33u
+#define GF_CLASS_TEXT_BOX_BASE 34u
+#define GF_CLASS_UP_DOWN_BASE 35u
+#define GF_CLASS_MASKED_TEXT_BOX 36u
+#define GF_CLASS_COMBO_BOX 37u
+#define GF_CLASS_DATA_GRID_VIEW 38u
+#define GF_CLASS_NUMERIC_UP_DOWN 39u
+#define GF_CLASS_DATE_TIME_PICKER 40u
+#define GF_CLASS_NODE_CANVAS 41u
+typedef struct gf_utf8_view gf_utf8_view;
+typedef struct gf_abi_version_info gf_abi_version_info;
+typedef struct gf_error_detail gf_error_detail;
+typedef struct gf_splashscreen_options gf_splashscreen_options;
+typedef struct gf_runtime_table gf_runtime_table;
+typedef struct gf_logical_point gf_logical_point;
+typedef struct gf_logical_size gf_logical_size;
+typedef struct gf_logical_rect gf_logical_rect;
+typedef struct gf_logical_insets gf_logical_insets;
+typedef struct gf_font gf_font;
+typedef struct gf_value gf_value;
+typedef struct gf_event_field gf_event_field;
+typedef struct gf_event gf_event;
+typedef struct gf_callback gf_callback;
+typedef struct gf_create_choice gf_create_choice;
+typedef struct gf_create_arguments gf_create_arguments;
+typedef struct gf_objects_table gf_objects_table;
+typedef struct gf_properties_table gf_properties_table;
+typedef struct gf_events_table gf_events_table;
+typedef struct gf_dispatch_table gf_dispatch_table;
+typedef struct gf_schema_interaction gf_schema_interaction;
+typedef struct gf_run_options gf_run_options;
+typedef struct gf_owned_window_options gf_owned_window_options;
+typedef struct gf_window_band_options gf_window_band_options;
+typedef struct gf_window_band_appearance gf_window_band_appearance;
+typedef struct gf_window_band_report gf_window_band_report;
+typedef struct gf_window_shaping gf_window_shaping;
+typedef struct gf_windows_table gf_windows_table;
+typedef struct gf_schema_type gf_schema_type;
+typedef struct gf_schema_item_system gf_schema_item_system;
+typedef struct gf_schema_part gf_schema_part;
+typedef struct gf_schema_property gf_schema_property;
+typedef struct gf_schema_choice gf_schema_choice;
+typedef struct gf_schema_engine gf_schema_engine;
+typedef struct gf_schema_primitive gf_schema_primitive;
+typedef struct gf_schema_parameter gf_schema_parameter;
+typedef struct gf_schema_effect gf_schema_effect;
+typedef struct gf_schema_composite gf_schema_composite;
+typedef struct gf_schema_table gf_schema_table;
+typedef struct gf_bytes_view gf_bytes_view;
+typedef struct gf_theme_file gf_theme_file;
+typedef struct gf_theme_package gf_theme_package;
+typedef struct gf_theme_report gf_theme_report;
+typedef struct gf_theme_diagnostic gf_theme_diagnostic;
+typedef struct gf_themes_table gf_themes_table;
+typedef struct gf_host_capabilities gf_host_capabilities;
+typedef struct gf_file_filter gf_file_filter;
+typedef struct gf_dialog_request gf_dialog_request;
+typedef struct gf_dialog_result gf_dialog_result;
+typedef struct gf_host_table gf_host_table;
+typedef struct gf_shadow_frame gf_shadow_frame;
+typedef struct gf_shadow_stack_info gf_shadow_stack_info;
+typedef struct gf_failure_snapshot gf_failure_snapshot;
+typedef struct gf_failure_detail gf_failure_detail;
+typedef struct gf_diagnostics_table gf_diagnostics_table;
+typedef struct gf_layout_transaction gf_layout_transaction;
+typedef struct gf_scroll_axis gf_scroll_axis;
+typedef struct gf_scroll_snapshot gf_scroll_snapshot;
+typedef struct gf_relative_pointer_request gf_relative_pointer_request;
+typedef struct gf_relative_pointer_grant gf_relative_pointer_grant;
+typedef struct gf_relative_pointer_state gf_relative_pointer_state;
+typedef struct gf_effect_mask_layer gf_effect_mask_layer;
+typedef struct gf_content_effect gf_content_effect;
+typedef struct gf_controls_table gf_controls_table;
+typedef struct gf_text_decoration gf_text_decoration;
+typedef struct gf_text_editing_table gf_text_editing_table;
+typedef struct gf_anchored_overlay_options gf_anchored_overlay_options;
+typedef struct gf_overlays_table gf_overlays_table;
+typedef struct gf_property_grid_table gf_property_grid_table;
+typedef struct gf_custom_property gf_custom_property;
+typedef struct gf_paint_target gf_paint_target;
+typedef struct gf_custom_semantics gf_custom_semantics;
+typedef struct gf_custom_control_callbacks gf_custom_control_callbacks;
+typedef struct gf_custom_layout_callbacks gf_custom_layout_callbacks;
+typedef struct gf_custom_control_spec gf_custom_control_spec;
+typedef struct gf_composite_spec gf_composite_spec;
+typedef struct gf_custom_controls_table gf_custom_controls_table;
+typedef struct gf_binding_arguments gf_binding_arguments;
+typedef struct gf_binding_field gf_binding_field;
+typedef struct gf_binding_record gf_binding_record;
+typedef struct gf_binding_column gf_binding_column;
+typedef struct gf_binding_sort_key gf_binding_sort_key;
+typedef struct gf_binding_predicate gf_binding_predicate;
+typedef struct gf_binding_provider_callbacks gf_binding_provider_callbacks;
+typedef struct gf_bindings_table gf_bindings_table;
+typedef struct gf_subsurface_content gf_subsurface_content;
+typedef struct gf_subsurfaces_table gf_subsurfaces_table;
+typedef struct gf_application_config gf_application_config;
+typedef struct gf_program_identity gf_program_identity;
+typedef struct gf_application_table gf_application_table;
+typedef struct gf_rule_condition gf_rule_condition;
+typedef struct gf_rule_action gf_rule_action;
+typedef struct gf_rule gf_rule;
+typedef struct gf_rules_table gf_rules_table;
+typedef struct gf_data_grid_column gf_data_grid_column;
+typedef struct gf_data_grid_row gf_data_grid_row;
+typedef struct gf_data_grid_cell gf_data_grid_cell;
+typedef struct gf_data_grid_table gf_data_grid_table;
+typedef struct gf_dock_panel gf_dock_panel;
+typedef struct gf_dock_edit gf_dock_edit;
+typedef struct gf_dock_location gf_dock_location;
+typedef struct gf_dock_options gf_dock_options;
+typedef struct gf_dock_frame_memory gf_dock_frame_memory;
+typedef struct gf_docking_table gf_docking_table;
+typedef struct gf_app_font_face gf_app_font_face;
+typedef struct gf_fonts_table gf_fonts_table;
+typedef struct gf_help_table gf_help_table;
+typedef struct gf_content_pixel_rect gf_content_pixel_rect;
+typedef struct gf_content_frame gf_content_frame;
+typedef struct gf_content_request gf_content_request;
+typedef struct gf_content_semantics gf_content_semantics;
+typedef struct gf_content_statistics gf_content_statistics;
+typedef struct gf_content_program gf_content_program;
+typedef struct gf_hosted_options gf_hosted_options;
+typedef struct gf_hosted_input_report gf_hosted_input_report;
+typedef struct gf_content_text_line gf_content_text_line;
+typedef struct gf_content_text_cluster gf_content_text_cluster;
+typedef struct gf_content_caret_stop gf_content_caret_stop;
+typedef struct gf_content_layout_transform gf_content_layout_transform;
+typedef struct gf_content_quad gf_content_quad;
+typedef struct gf_content_text_layout gf_content_text_layout;
+typedef struct gf_content_table gf_content_table;
+typedef struct gf_list_view_column gf_list_view_column;
+typedef struct gf_list_view_item gf_list_view_item;
+typedef struct gf_list_view_group gf_list_view_group;
+typedef struct gf_list_view_table gf_list_view_table;
+typedef struct gf_windows_paint_endpoint_table gf_windows_paint_endpoint_table;
+typedef struct gf_segment_header gf_segment_header;
+typedef struct gf_class_header gf_class_header;
+typedef struct gf_control_hooks gf_control_hooks;
+typedef struct gf_masked_text_box_hooks gf_masked_text_box_hooks;
+typedef struct gf_picture_box_hooks gf_picture_box_hooks;
+typedef struct gf_combo_box_hooks gf_combo_box_hooks;
+typedef struct gf_data_grid_view_hooks gf_data_grid_view_hooks;
+typedef struct gf_check_box_hooks gf_check_box_hooks;
+typedef struct gf_radio_button_hooks gf_radio_button_hooks;
+typedef struct gf_range_control_hooks gf_range_control_hooks;
+typedef struct gf_numeric_up_down_hooks gf_numeric_up_down_hooks;
+typedef struct gf_date_time_picker_hooks gf_date_time_picker_hooks;
+typedef struct gf_node_canvas_hooks gf_node_canvas_hooks;
+typedef struct gf_button_base_class gf_button_base_class;
+typedef struct gf_button_class gf_button_class;
+typedef struct gf_link_label_class gf_link_label_class;
+typedef struct gf_label_class gf_label_class;
+typedef struct gf_picture_box_class gf_picture_box_class;
+typedef struct gf_progress_bar_class gf_progress_bar_class;
+typedef struct gf_sweep_scope_class gf_sweep_scope_class;
+typedef struct gf_list_box_class gf_list_box_class;
+typedef struct gf_check_box_class gf_check_box_class;
+typedef struct gf_radio_button_class gf_radio_button_class;
+typedef struct gf_range_control_class gf_range_control_class;
+typedef struct gf_track_bar_class gf_track_bar_class;
+typedef struct gf_panel_class gf_panel_class;
+typedef struct gf_group_box_class gf_group_box_class;
+typedef struct gf_material_panel_class gf_material_panel_class;
+typedef struct gf_card_class gf_card_class;
+typedef struct gf_container_control_class gf_container_control_class;
+typedef struct gf_user_control_class gf_user_control_class;
+typedef struct gf_page_strip_class gf_page_strip_class;
+typedef struct gf_page_view_class gf_page_view_class;
+typedef struct gf_navigation_pane_class gf_navigation_pane_class;
+typedef struct gf_dock_site_class gf_dock_site_class;
+typedef struct gf_dock_navigator_class gf_dock_navigator_class;
+typedef struct gf_scaled_panel_class gf_scaled_panel_class;
+typedef struct gf_scrollable_control_class gf_scrollable_control_class;
+typedef struct gf_scroll_bar_class gf_scroll_bar_class;
+typedef struct gf_tool_strip_class gf_tool_strip_class;
+typedef struct gf_gauge_base_class gf_gauge_base_class;
+typedef struct gf_dial_class gf_dial_class;
+typedef struct gf_raster_canvas_class gf_raster_canvas_class;
+typedef struct gf_text_box_base_class gf_text_box_base_class;
+typedef struct gf_list_control_class gf_list_control_class;
+typedef struct gf_up_down_base_class gf_up_down_base_class;
+typedef struct gf_node_canvas_class gf_node_canvas_class;
+typedef struct gf_classes_table gf_classes_table;
+typedef gf_status (*gf_base_raiser)(gf_object self, gf_event* event);
+typedef void (*gf_hook_entry)(void* instance, gf_object self, gf_event* event, gf_base_raiser base);
+struct gf_utf8_view {
+    const char* data;
+    uint64_t size;
+};
+struct gf_abi_version_info {
+    uint32_t struct_size;
+    uint32_t abi_major;
+    uint32_t abi_minor;
+    uint32_t library_major;
+    uint32_t library_minor;
+    uint32_t library_patch;
+};
+struct gf_error_detail {
+    uint32_t struct_size;
+    gf_status status;
+    gf_table_id table_id;
+    uint32_t slot_index;
+    uint64_t message_size;
+};
+struct gf_splashscreen_options {
+    uint32_t struct_size;
+    uint32_t show_progress;
+    const uint8_t* artwork;
+    uint64_t artwork_size;
+    gf_utf8_view status;
+    double progress;
+};
+struct gf_runtime_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*version)(gf_abi_version_info* info);
+    gf_status (*error_detail)(gf_error_detail* detail, char* message_buffer, uint64_t message_capacity, uint64_t* message_required);
+    gf_status (*clear_error)(void);
+    gf_status (*splashscreen_show)(const gf_splashscreen_options* options, gf_splashscreen* splashscreen);
+    gf_status (*splashscreen_set_status)(gf_splashscreen splashscreen, gf_utf8_view status);
+    gf_status (*splashscreen_set_progress)(gf_splashscreen splashscreen, uint32_t show_progress, double progress);
+    gf_status (*splashscreen_close)(gf_splashscreen splashscreen);
+};
+struct gf_logical_point {
+    double x;
+    double y;
+};
+struct gf_logical_size {
+    double width;
+    double height;
+};
+struct gf_logical_rect {
+    double x;
+    double y;
+    double width;
+    double height;
+};
+struct gf_logical_insets {
+    double left;
+    double top;
+    double right;
+    double bottom;
+};
+struct gf_font {
+    gf_font_role role;
+    uint32_t weight;
+    uint32_t italic;
+    uint32_t reserved;
+    double size;
+    double letter_spacing;
+};
+struct gf_value {
+    uint32_t struct_size;
+    gf_value_kind kind;
+    uint32_t boolean;
+    uint32_t color;
+    int64_t signed_integer;
+    uint64_t unsigned_integer;
+    double number;
+    gf_utf8_view text;
+    gf_logical_point point;
+    gf_logical_size size;
+    gf_logical_rect rectangle;
+    gf_logical_insets insets;
+    gf_font font;
+    const gf_value* elements;
+    uint64_t element_count;
+};
+struct gf_event_field {
+    gf_utf8_view name;
+    gf_value_kind kind;
+    gf_event_field_flags flags;
+    const gf_value* value;
+};
+struct gf_event {
+    uint32_t struct_size;
+    uint32_t cancel;
+    gf_object sender;
+    gf_utf8_view name;
+    const gf_value* payload;
+    uint64_t field_count;
+    const gf_event_field* fields;
+};
+struct gf_callback {
+    uint32_t struct_size;
+    uint32_t reserved;
+    void (*invoke)(void* context, gf_event* event);
+    void (*release)(void* context);
+    void* context;
+};
+struct gf_create_choice {
+    gf_utf8_view name;
+    int64_t value;
+};
+struct gf_create_arguments {
+    uint32_t struct_size;
+    gf_create_flags flags;
+    gf_object owner;
+    gf_utf8_view enumeration;
+    const gf_create_choice* choices;
+    uint64_t choice_count;
+    int64_t value;
+};
+struct gf_objects_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*create)(gf_utf8_view type_name, gf_utf8_view stable_id, gf_object* object);
+    gf_status (*retain)(gf_object object);
+    gf_status (*release)(gf_object object);
+    gf_status (*dispose)(gf_object object);
+    gf_status (*state)(gf_object object, gf_object_state* state);
+    gf_status (*type_id)(gf_object object, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*stable_id)(gf_object object, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*insert_child)(gf_object parent, gf_object child, uint64_t index);
+    gf_status (*remove_child)(gf_object parent, gf_object child);
+    gf_status (*child_count)(gf_object parent, uint64_t* count);
+    gf_status (*child_at)(gf_object parent, uint64_t index, gf_object* child);
+    gf_status (*parent)(gf_object object, gf_object* parent);
+    gf_status (*create_with)(gf_utf8_view type_name, gf_utf8_view stable_id, const gf_create_arguments* arguments, gf_object* object);
+};
+struct gf_properties_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*get)(gf_object object, gf_utf8_view name, gf_value* value, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+    gf_status (*set)(gf_object object, gf_utf8_view name, const gf_value* value);
+    gf_status (*reset)(gf_object object, gf_utf8_view name);
+    gf_status (*element_at)(gf_object object, gf_utf8_view name, uint64_t index, gf_value* value, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+    gf_status (*read_elements)(gf_object object, gf_utf8_view name, uint64_t first, uint64_t count, gf_value* values, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+    gf_status (*get_at)(gf_object object, uint64_t index, gf_value* value, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+    gf_status (*set_at)(gf_object object, uint64_t index, const gf_value* value);
+};
+struct gf_events_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*subscribe)(gf_object source, gf_utf8_view interaction, const gf_callback* callback, gf_subscription* subscription);
+    gf_status (*subscribe_property)(gf_object source, gf_utf8_view property, const gf_callback* callback, gf_subscription* subscription);
+    gf_status (*disconnect)(gf_subscription subscription);
+    gf_status (*write_field)(gf_event* event, uint64_t field, const gf_value* value);
+    gf_status (*field_element)(const gf_event* event, uint64_t field, uint64_t index, gf_value* element);
+};
+struct gf_dispatch_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*begin_invoke)(gf_object target, const gf_callback* callback);
+    gf_status (*run_pending)(uint64_t* invoked);
+};
+struct gf_schema_interaction {
+    uint32_t struct_size;
+    uint32_t mutable_payload;
+    gf_utf8_view name;
+    gf_utf8_view payload;
+};
+struct gf_run_options {
+    uint32_t struct_size;
+    gf_run_flags flags;
+    gf_utf8_view title;
+    double width;
+    double height;
+    const gf_callback* ready;
+    const gf_callback* closing;
+    const gf_callback* closed;
+    double minimum_width;
+    double minimum_height;
+};
+struct gf_owned_window_options {
+    uint32_t struct_size;
+    gf_owned_window_flags flags;
+    gf_utf8_view title;
+    double width;
+    double height;
+    gf_object owner;
+    const gf_callback* ready;
+    const gf_callback* closing;
+    const gf_callback* closed;
+};
+struct gf_window_band_options {
+    uint32_t struct_size;
+    gf_window_band_flags flags;
+    gf_window_band_full_screen full_screen;
+    uint32_t reserved;
+    double width;
+    gf_logical_insets edges;
+};
+struct gf_window_band_appearance {
+    uint32_t struct_size;
+    gf_window_band_state state;
+    gf_window_band_appearance_flags flags;
+    gf_window_band_role lit_role;
+    uint32_t rest_colour;
+    uint32_t lit_colour;
+    double frequency;
+    gf_window_band_texture texture;
+    uint32_t texture_kind;
+    uint32_t texture_seed;
+    uint32_t texture_primary;
+    uint32_t texture_secondary;
+    uint32_t reserved;
+    double texture_tile;
+    double texture_strength;
+    double texture_opacity;
+};
+struct gf_window_band_report {
+    uint32_t struct_size;
+    gf_window_band_status status;
+    gf_logical_insets edges;
+    uint32_t drawn_colour;
+    gf_window_band_full_screen full_screen;
+    double frequency;
+    uint64_t flash_changes;
+    uint64_t cycle_frames;
+};
+struct gf_window_shaping {
+    uint32_t struct_size;
+    gf_window_shaping_flags flags;
+    gf_window_corner_preference preference;
+    uint32_t corner_shapes;
+    uint32_t corner_shape;
+    uint32_t reserved;
+    double corner_radius;
+};
+struct gf_windows_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*run)(gf_object window_or_root, const gf_run_options* options);
+    gf_status (*request_close)(gf_object window_or_root);
+    gf_status (*create)(gf_object root, gf_object* window);
+    gf_status (*interaction_count)(uint64_t* count);
+    gf_status (*interaction_at)(uint64_t interaction, gf_schema_interaction* record);
+    gf_status (*request_help)(gf_object window, uint32_t* handled);
+    gf_status (*key_state)(gf_object window, uint32_t physical_key, uint32_t* down);
+    gf_status (*show_modal)(gf_object root, const gf_owned_window_options* options, gf_dialog_result_code* result);
+    gf_status (*show_owned)(gf_object root, const gf_owned_window_options* options);
+    gf_status (*window_properties)(gf_object window, gf_window_property_flags* supported, gf_window_property_flags* applied);
+    gf_status (*focused_control)(gf_object window_or_root, gf_object* control);
+    gf_status (*declare_band)(gf_object window, const gf_window_band_options* options);
+    gf_status (*undeclare_band)(gf_object window);
+    gf_status (*set_band_appearance)(gf_object window, const gf_window_band_appearance* appearance);
+    gf_status (*band_report)(gf_object window, gf_window_band_report* report);
+    gf_status (*set_corner_preference)(gf_object window, gf_window_corner_preference preference);
+    gf_status (*content_rect)(gf_object window, gf_logical_rect* rect);
+    gf_status (*shaping)(gf_object window, gf_window_shaping* report);
+    gf_status (*pointer_location)(gf_object window_or_control, gf_logical_point* location, gf_logical_point* window_position, uint32_t* inside);
+    gf_status (*show_business_card)(gf_object window_or_root, uint32_t* shown);
+    gf_status (*set_mdi_container)(gf_object window_or_root, uint32_t container);
+    gf_status (*mdi_container)(gf_object window_or_root, uint32_t* container);
+    gf_status (*mdi_child_count)(gf_object window_or_root, uint64_t* count);
+    gf_status (*mdi_child_at)(gf_object window_or_root, uint64_t index, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*active_mdi_child)(gf_object window_or_root, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*activate_mdi_child)(gf_object window_or_root, gf_utf8_view child, uint32_t* activated);
+    gf_status (*layout_mdi)(gf_object window_or_root, gf_mdi_layout layout, uint32_t* arranged);
+    gf_status (*set_mdi_children_minimized_anchor_bottom)(gf_object window_or_root, uint32_t bottom);
+    gf_status (*mdi_children_minimized_anchor_bottom)(gf_object window_or_root, uint32_t* bottom);
+    gf_status (*set_main_menu_strip)(gf_object window_or_root, gf_object strip);
+    gf_status (*main_menu_strip)(gf_object window_or_root, gf_object* strip);
+};
+struct gf_schema_type {
+    uint32_t struct_size;
+    gf_schema_kind kind;
+    gf_utf8_view id;
+    gf_utf8_view type_name;
+    uint64_t part_count;
+    uint64_t state_count;
+    uint64_t custom_state_count;
+    uint64_t item_system_count;
+    uint64_t property_count;
+    uint64_t interaction_count;
+};
+struct gf_schema_item_system {
+    uint32_t struct_size;
+    uint32_t reserved;
+    gf_utf8_view name;
+    uint64_t part_count;
+    uint64_t state_count;
+    uint64_t custom_state_count;
+};
+struct gf_schema_part {
+    uint32_t struct_size;
+    uint32_t reserved;
+    gf_utf8_view name;
+    gf_utf8_view role;
+    gf_utf8_view composed_from;
+    uint64_t state_count;
+};
+struct gf_schema_property {
+    uint32_t struct_size;
+    gf_value_kind kind;
+    gf_utf8_view name;
+    gf_utf8_view category;
+    gf_utf8_view enumeration;
+    uint64_t choice_count;
+    gf_schema_property_flags flags;
+    gf_schema_serialization serialization;
+};
+struct gf_schema_choice {
+    uint32_t struct_size;
+    uint32_t reserved;
+    gf_utf8_view name;
+    int64_t value;
+};
+struct gf_schema_engine {
+    uint32_t struct_size;
+    uint32_t version_major;
+    uint32_t version_minor;
+    uint32_t reserved;
+    uint64_t operations_per_device_pixel;
+    uint64_t animated_operations_per_frame;
+    uint64_t expression_maximum_operations;
+    uint64_t expression_maximum_stack;
+    uint64_t published_values_maximum;
+    uint64_t transition_maximum_states;
+    uint64_t transition_maximum_per_part;
+    double ambient_maximum_frames_per_second;
+    double ambient_maximum_window_fraction;
+    uint64_t primitive_count;
+};
+struct gf_schema_primitive {
+    uint32_t struct_size;
+    uint32_t introduced_major;
+    uint32_t introduced_minor;
+    uint32_t cost_per_device_pixel;
+    uint32_t cost_fixed;
+    uint32_t cost_preparation_per_device_pixel;
+    gf_utf8_view name;
+    gf_logical_insets outsets;
+    uint64_t role_count;
+    uint64_t state_read_count;
+    uint64_t input_read_count;
+    uint64_t parameter_count;
+};
+struct gf_schema_parameter {
+    uint32_t struct_size;
+    gf_schema_parameter_kind kind;
+    gf_utf8_view name;
+    double minimum;
+    double maximum;
+    double default_number;
+    uint32_t default_color;
+    uint32_t animated;
+    uint64_t choice_count;
+};
+struct gf_schema_effect {
+    uint32_t struct_size;
+    gf_schema_effect_time_model time_model;
+    gf_utf8_view name;
+    gf_utf8_view parent;
+    uint32_t engine_version;
+    gf_schema_effect_input input;
+    uint32_t cost_fixed;
+    uint32_t cost_per_device_pixel;
+    uint32_t setup_cost;
+    gf_schema_effect_flags flags;
+    uint64_t state_budget;
+    double frames_per_second;
+    gf_logical_insets outsets;
+};
+struct gf_schema_composite {
+    uint32_t struct_size;
+    uint32_t reserved;
+    uint64_t composite;
+    gf_utf8_view id;
+    gf_utf8_view name;
+    gf_utf8_view version;
+    gf_utf8_view slot;
+    uint64_t part_count;
+    uint64_t state_count;
+    uint64_t custom_state_count;
+    uint64_t property_count;
+    uint64_t event_count;
+    uint64_t command_count;
+};
+struct gf_schema_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*vocabulary_count)(gf_schema_vocabulary vocabulary, uint64_t* count);
+    gf_status (*vocabulary_at)(gf_schema_vocabulary vocabulary, uint64_t index, gf_utf8_view* name);
+    gf_status (*type_count)(uint64_t* count);
+    gf_status (*find_type)(gf_utf8_view name, uint64_t* type);
+    gf_status (*type_at)(uint64_t type, gf_schema_type* record);
+    gf_status (*item_system_at)(uint64_t type, uint64_t system, gf_schema_item_system* record);
+    gf_status (*part_at)(uint64_t type, uint64_t system, uint64_t part, gf_schema_part* record);
+    gf_status (*state_at)(uint64_t type, uint64_t system, uint64_t part, uint64_t state, gf_utf8_view* name);
+    gf_status (*custom_state_at)(uint64_t type, uint64_t system, uint64_t state, gf_utf8_view* name);
+    gf_status (*property_at)(uint64_t type, uint64_t property, gf_schema_property* record);
+    gf_status (*choice_at)(uint64_t type, uint64_t property, uint64_t choice, gf_schema_choice* record);
+    gf_status (*interaction_at)(uint64_t type, uint64_t interaction, gf_schema_interaction* record);
+    gf_status (*engine)(gf_schema_engine* record);
+    gf_status (*primitive_at)(uint64_t primitive, gf_schema_primitive* record);
+    gf_status (*primitive_name_at)(uint64_t primitive, gf_schema_primitive_list list, uint64_t index, gf_utf8_view* name);
+    gf_status (*parameter_at)(uint64_t primitive, uint64_t parameter, gf_schema_parameter* record);
+    gf_status (*parameter_choice_at)(uint64_t primitive, uint64_t parameter, uint64_t choice, gf_utf8_view* name);
+    gf_status (*effect_count)(uint64_t* count);
+    gf_status (*effect_at)(uint64_t effect, gf_schema_effect* record);
+    gf_status (*child_property_count)(uint64_t type, uint64_t* count);
+    gf_status (*child_property_at)(uint64_t type, uint64_t property, gf_schema_property* record);
+    gf_status (*child_choice_at)(uint64_t type, uint64_t property, uint64_t choice, gf_schema_choice* record);
+    gf_status (*composite_count)(uint64_t* count);
+    gf_status (*composite_at)(uint64_t index, gf_schema_composite* record);
+    gf_status (*composite_part_at)(uint64_t composite, uint64_t part, gf_schema_part* record);
+    gf_status (*composite_state_at)(uint64_t composite, uint64_t part, uint64_t state, gf_utf8_view* name);
+    gf_status (*composite_custom_state_at)(uint64_t composite, uint64_t state, gf_utf8_view* name);
+    gf_status (*composite_property_at)(uint64_t composite, uint64_t property, gf_schema_property* record);
+    gf_status (*composite_choice_at)(uint64_t composite, uint64_t property, uint64_t choice, gf_schema_choice* record);
+    gf_status (*composite_event_at)(uint64_t composite, uint64_t event, gf_schema_interaction* record);
+    gf_status (*composite_command_at)(uint64_t composite, uint64_t command, gf_utf8_view* name);
+};
+struct gf_bytes_view {
+    const uint8_t* data;
+    uint64_t size;
+};
+struct gf_theme_file {
+    gf_utf8_view path;
+    gf_bytes_view bytes;
+};
+struct gf_theme_package {
+    uint32_t struct_size;
+    uint32_t reserved;
+    gf_bytes_view manifest;
+    const gf_theme_file* files;
+    uint64_t file_count;
+};
+struct gf_theme_report {
+    uint32_t struct_size;
+    gf_theme_outcome outcome;
+    uint64_t diagnostic_count;
+};
+struct gf_theme_diagnostic {
+    uint32_t struct_size;
+    gf_theme_severity severity;
+    uint32_t line;
+    uint32_t column;
+};
+struct gf_themes_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*load)(const gf_theme_package* package, gf_theme_report* report);
+    gf_status (*reset)(void);
+    gf_status (*install)(const gf_theme_package* package, gf_theme_report* report);
+    gf_status (*remove)(gf_utf8_view name, uint32_t* removed);
+    gf_status (*diagnostic_at)(uint64_t index, gf_theme_diagnostic* record);
+    gf_status (*diagnostic_text)(uint64_t index, gf_theme_diagnostic_text text, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*theme_id)(char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*publish_value)(gf_utf8_view name, double value);
+    gf_status (*withdraw_value)(gf_utf8_view name);
+    gf_status (*published_value)(gf_utf8_view name, double* value, uint32_t* present);
+    gf_status (*load_image)(const uint8_t* bytes, uint64_t size, uint64_t* image);
+    gf_status (*remove_image)(uint64_t image);
+    gf_status (*load_pixels)(const uint8_t* pixels, uint32_t width, uint32_t height, uint64_t row_bytes, uint64_t* image);
+    gf_status (*load_sheet)(gf_utf8_view sheet, gf_utf8_view name, gf_theme_report* report);
+    gf_status (*set_user_theme_policy)(gf_user_theme_policy policy);
+    gf_status (*theme_request)(gf_theme_request_outcome* outcome);
+};
+struct gf_host_capabilities {
+    uint32_t struct_size;
+    uint32_t protocol_version;
+    gf_host_capability available;
+    gf_transient_surface_kind transient_surfaces;
+    uint32_t reserved;
+    gf_window_corner_shape window_corner_shapes;
+    uint32_t window_band_maximum_width;
+};
+struct gf_file_filter {
+    gf_utf8_view label;
+    const gf_utf8_view* extensions;
+    uint64_t extension_count;
+};
+struct gf_dialog_request {
+    uint32_t struct_size;
+    gf_dialog_kind kind;
+    gf_utf8_view title;
+    gf_utf8_view message;
+    gf_utf8_view initial_directory;
+    gf_utf8_view suggested_name;
+    gf_utf8_view default_extension;
+    const gf_file_filter* filters;
+    uint64_t filter_count;
+    uint64_t initial_filter;
+    gf_message_buttons buttons;
+    gf_message_icon icon;
+    gf_dialog_choice default_choice;
+    gf_dialog_flags flags;
+    uint32_t initial_rgba;
+    uint32_t reserved;
+    gf_object owner;
+};
+struct gf_dialog_result {
+    uint32_t struct_size;
+    gf_dialog_outcome outcome;
+    gf_dialog_choice choice;
+    uint32_t rgba;
+    uint64_t path_count;
+    uint64_t chosen_filter;
+};
+struct gf_host_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*capabilities)(gf_host_capabilities* record);
+    gf_status (*platform_name)(char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*set_cursor)(gf_pointer_cursor cursor);
+    gf_status (*read_clipboard_text)(char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*write_clipboard_text)(gf_utf8_view text);
+    gf_status (*show_dialog)(const gf_dialog_request* request, gf_dialog_result* result);
+    gf_status (*dialog_path_at)(uint64_t index, char* buffer, uint64_t capacity, uint64_t* required);
+};
+struct gf_shadow_frame {
+    gf_shadow_frame_kind kind;
+    gf_shadow_frame_flags flags;
+    gf_table_id table_id;
+    uint32_t slot_index;
+    uint64_t sequence;
+    uint32_t subject_size;
+    uint32_t name_size;
+    uint8_t subject[48];
+    uint8_t name[32];
+};
+struct gf_shadow_stack_info {
+    uint32_t struct_size;
+    uint32_t depth;
+    uint64_t pushed;
+    uint64_t dropped;
+};
+struct gf_failure_snapshot {
+    uint32_t struct_size;
+    gf_status status;
+    gf_table_id table_id;
+    uint32_t slot_index;
+    uint64_t sequence;
+    uint32_t frame_count;
+    uint32_t depth;
+    uint32_t site_size;
+    uint32_t message_size;
+    uint8_t site[64];
+};
+struct gf_failure_detail {
+    uint32_t struct_size;
+    gf_status status;
+    uint64_t sequence;
+    uint32_t type_size;
+    uint32_t trace_count;
+    uint8_t type[256];
+    uint64_t trace[32];
+    gf_failure_detail_flags flags;
+    uint32_t reserved;
+};
+struct gf_diagnostics_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*shadow_frames)(gf_shadow_frame* frames, uint64_t capacity, uint64_t* required, gf_shadow_stack_info* info);
+    gf_status (*set_invalidation_overlay)(uint32_t enabled);
+    gf_status (*invalidation_overlay)(uint32_t* enabled);
+    gf_status (*failure_snapshot)(gf_failure_snapshot* snapshot, gf_shadow_frame* frames, uint64_t frame_capacity, uint64_t* frames_required, char* message_buffer, uint64_t message_capacity, uint64_t* message_required);
+    gf_status (*clear_failure_snapshot)(void);
+    gf_status (*set_exception_reflection)(uint32_t enabled);
+    gf_status (*exception_reflection)(uint32_t* enabled);
+    gf_status (*raise_native_exception)(gf_utf8_view message);
+    gf_status (*failure_detail)(gf_failure_detail* detail);
+    gf_status (*set_diagnostic_overlay)(uint32_t enabled);
+    gf_status (*toggle_diagnostic_overlay)(uint32_t* enabled);
+};
+struct gf_layout_transaction {
+    uint32_t struct_size;
+    uint32_t suspend_depth;
+    uint32_t deferred;
+    uint32_t reserved;
+    uint64_t requested_revision;
+    uint64_t committed_revision;
+};
+struct gf_scroll_axis {
+    uint32_t enabled;
+    uint32_t visible;
+    double minimum;
+    double maximum;
+    double large_change;
+    double small_change;
+    double value;
+};
+struct gf_scroll_snapshot {
+    uint32_t struct_size;
+    uint32_t auto_scroll;
+    gf_logical_point position;
+    gf_logical_size margin;
+    gf_logical_size minimum_content_size;
+    gf_logical_rect display_rectangle;
+    gf_logical_rect viewport_rectangle;
+    gf_scroll_axis horizontal;
+    gf_scroll_axis vertical;
+    uint64_t event_revision;
+    uint32_t event_type;
+    gf_scroll_orientation event_orientation;
+    double event_old_value;
+    double event_new_value;
+};
+struct gf_relative_pointer_request {
+    uint32_t struct_size;
+    gf_relative_pointer_mode mode;
+    uint32_t hide_cursor;
+    uint32_t raw_motion;
+    uint32_t until_release;
+    uint32_t reserved;
+};
+struct gf_relative_pointer_grant {
+    uint32_t struct_size;
+    gf_relative_pointer_result result;
+    gf_relative_pointer_mode mode;
+    uint32_t raw;
+    uint32_t cursor_hidden;
+    uint32_t host_relative;
+};
+struct gf_relative_pointer_state {
+    uint32_t struct_size;
+    uint32_t owned;
+    uint32_t active;
+    uint32_t suspended;
+    gf_relative_pointer_mode mode;
+    uint32_t raw;
+    uint32_t host_relative;
+    gf_relative_pointer_end last_end;
+    uint64_t grants;
+    uint64_t samples;
+    uint64_t suspensions;
+    uint64_t resumptions;
+    uint64_t ends;
+    uint32_t support_relative_motion;
+    uint32_t support_raw_motion;
+    uint32_t support_lock;
+    uint32_t support_confine;
+    uint32_t support_warp;
+    uint32_t reserved;
+};
+struct gf_effect_mask_layer {
+    uint32_t struct_size;
+    gf_effect_mask_mode mode;
+    gf_effect_mask_composite composite;
+    uint32_t start_rgba;
+    uint32_t end_rgba;
+    uint32_t reserved;
+    gf_logical_point start;
+    gf_logical_point end;
+};
+struct gf_content_effect {
+    uint32_t struct_size;
+    uint32_t has_colour_matrix;
+    uint32_t has_colour_table;
+    uint32_t mask_count;
+    double colour_matrix[20];
+    uint8_t colour_table[1024];
+    double blur;
+    const gf_effect_mask_layer* masks;
+};
+struct gf_controls_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*suspend_layout)(gf_object object);
+    gf_status (*resume_layout)(gf_object object, uint32_t perform_layout);
+    gf_status (*perform_layout)(gf_object object);
+    gf_status (*layout_state)(gf_object object, gf_layout_transaction* state);
+    gf_status (*window_bounds)(gf_object object, gf_logical_rect* bounds);
+    gf_status (*set_pointer_capture)(gf_object object, uint32_t captured);
+    gf_status (*pointer_capture)(gf_object object, uint32_t* captured);
+    gf_status (*scroll_state)(gf_object object, gf_scroll_snapshot* state);
+    gf_status (*set_scroll_axis)(gf_object object, gf_scroll_orientation orientation, const gf_scroll_axis* axis);
+    gf_status (*scroll_into_view)(gf_object object, gf_object child);
+    gf_status (*invalidate)(gf_object object, const gf_logical_rect* damage);
+    gf_status (*focus)(gf_object object, uint32_t* focused);
+    gf_status (*focus_state)(gf_object object, uint32_t* focused, uint32_t* contains_focus);
+    gf_status (*request_relative_pointer)(gf_object object, const gf_relative_pointer_request* request, gf_relative_pointer_grant* grant);
+    gf_status (*release_relative_pointer)(gf_object object, uint32_t* released);
+    gf_status (*relative_pointer_state)(gf_object object, gf_relative_pointer_state* state);
+    gf_status (*warp_pointer)(gf_object object, gf_logical_point position, uint32_t* warped);
+    gf_status (*set_pointer_release_regions)(gf_object object, const gf_logical_rect* regions, uint32_t count);
+    gf_status (*set_content_effect)(gf_object object, const gf_content_effect* effect);
+};
+struct gf_text_decoration {
+    uint64_t start;
+    uint64_t end;
+    gf_text_decoration_fields fields;
+    gf_text_ink_role ink;
+    uint32_t foreground;
+    uint32_t weight;
+    uint32_t italic;
+    gf_text_underline underline;
+    uint32_t underline_color;
+    uint32_t background;
+    uint32_t tag;
+    uint32_t reserved;
+};
+struct gf_text_editing_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*select)(gf_object object, uint64_t anchor, uint64_t caret);
+    gf_status (*selection)(gf_object object, uint64_t* anchor, uint64_t* caret);
+    gf_status (*grapheme_boundary)(gf_object object, uint64_t position, int32_t direction, uint64_t* boundary);
+    gf_status (*replace_range)(gf_object object, uint64_t start, uint64_t length, gf_utf8_view replacement, uint32_t* changed);
+    gf_status (*undo)(gf_object object, uint32_t* changed);
+    gf_status (*redo)(gf_object object, uint32_t* changed);
+    gf_status (*clear_undo_history)(gf_object object);
+    gf_status (*set_decorations)(gf_object object, uint32_t layer, const gf_text_decoration* decorations, uint64_t count);
+    gf_status (*replace_decorations)(gf_object object, uint32_t layer, uint64_t start, uint64_t end, const gf_text_decoration* decorations, uint64_t count);
+    gf_status (*clear_decorations)(gf_object object);
+    gf_status (*decoration_count)(gf_object object, uint32_t layer, uint64_t* count);
+    gf_status (*decoration_at)(gf_object object, uint32_t layer, uint64_t index, gf_text_decoration* decoration);
+    gf_status (*utf8_to_utf16_offset)(gf_object object, uint64_t utf8_offset, uint64_t* utf16_offset);
+    gf_status (*utf16_to_utf8_offset)(gf_object object, uint64_t utf16_offset, uint64_t* utf8_offset);
+};
+struct gf_anchored_overlay_options {
+    uint32_t struct_size;
+    gf_anchored_overlay_flags flags;
+    double width;
+    double height;
+    double gap;
+    const gf_callback* events;
+};
+struct gf_overlays_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*open_overlay)(gf_object owner, gf_object overlay);
+    gf_status (*close_overlay)(gf_object overlay);
+    gf_status (*set_tool_tip)(gf_object tool_tip, gf_object target, gf_utf8_view text);
+    gf_status (*show_tool_tip)(gf_object tool_tip, gf_object target, uint64_t duration_ms);
+    gf_status (*hide_tool_tip)(gf_object tool_tip);
+    gf_status (*open_anchored)(gf_object anchor, gf_object content, const gf_anchored_overlay_options* options);
+    gf_status (*close_anchored)(gf_object content);
+    gf_status (*set_tool_tips_shown)(gf_object window, gf_tool_tips_setting setting);
+    gf_status (*tool_tips_shown)(gf_object window, uint32_t* shown, gf_tool_tips_setting* setting);
+};
+struct gf_property_grid_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*select_objects)(gf_object grid, const gf_object* objects, uint64_t count);
+    gf_status (*refresh)(gf_object grid);
+    gf_status (*try_set_text)(gf_object grid, gf_utf8_view name, gf_utf8_view text, uint32_t* accepted);
+    gf_status (*reset_property)(gf_object grid, gf_utf8_view name, uint32_t* reset);
+    gf_status (*activate_editor)(gf_object grid, gf_utf8_view name, uint32_t* activated);
+};
+struct gf_custom_property {
+    gf_utf8_view name;
+    gf_utf8_view category;
+    gf_utf8_view description;
+    gf_value_kind kind;
+    gf_custom_property_flags flags;
+    const gf_value* default_value;
+    gf_utf8_view enumeration;
+    const gf_create_choice* choices;
+    uint64_t choice_count;
+};
+struct gf_paint_target {
+    uint32_t struct_size;
+    uint32_t width;
+    uint32_t height;
+    uint32_t reserved;
+    uint64_t row_bytes;
+    uint8_t* pixels;
+    double scale;
+    gf_logical_rect damage;
+};
+struct gf_custom_semantics {
+    uint32_t struct_size;
+    uint32_t role;
+    gf_utf8_view name;
+    gf_utf8_view value;
+    gf_utf8_view description;
+};
+struct gf_custom_control_callbacks {
+    uint32_t struct_size;
+    uint32_t reserved;
+    void* context;
+    void (*paint)(void* context, gf_object control, const gf_paint_target* target);
+    gf_status (*get_property)(void* context, gf_object control, uint64_t index, gf_value* value);
+    gf_status (*set_property)(void* context, gf_object control, uint64_t index, const gf_value* value);
+    void (*release)(void* context);
+};
+struct gf_custom_layout_callbacks {
+    uint32_t struct_size;
+    uint32_t reserved;
+    gf_status (*measure)(void* context, gf_object control, gf_logical_size available, gf_logical_size* preferred);
+    gf_status (*hit_test)(void* context, gf_object control, gf_logical_point point, uint32_t* hit);
+    gf_status (*semantics)(void* context, gf_object control, gf_custom_semantics* semantics);
+};
+struct gf_custom_control_spec {
+    uint32_t struct_size;
+    gf_custom_base base;
+    gf_custom_control_flags flags;
+    uint32_t property_size;
+    const gf_custom_property* properties;
+    uint64_t property_count;
+    gf_custom_control_callbacks callbacks;
+    const gf_custom_layout_callbacks* layout;
+};
+struct gf_composite_spec {
+    uint32_t struct_size;
+    uint32_t reserved;
+    gf_utf8_view file;
+    gf_utf8_view document;
+    const gf_utf8_view* child_types;
+    uint64_t child_type_count;
+};
+struct gf_custom_controls_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*create)(const gf_custom_control_spec* spec, gf_utf8_view stable_id, gf_object* object);
+    gf_status (*notify_changed)(gf_object object, uint64_t index);
+    gf_status (*load_composite)(const gf_composite_spec* spec, gf_object* definition);
+    gf_status (*create_composite)(gf_object definition, gf_utf8_view stable_id, gf_object* object);
+    gf_status (*perform_composite)(gf_object control, gf_utf8_view command, uint32_t* performed);
+    gf_status (*composite_child)(gf_object control, gf_utf8_view local_id, gf_object* child);
+};
+struct gf_binding_arguments {
+    uint32_t struct_size;
+    gf_source_update_mode source_update_mode;
+    gf_control_update_mode control_update_mode;
+    uint32_t formatting_enabled;
+    gf_object target;
+    gf_object source;
+    gf_utf8_view property;
+    gf_utf8_view data_member;
+    gf_utf8_view format_string;
+    const gf_value* null_value;
+    const gf_value* source_null_value;
+};
+struct gf_binding_field {
+    gf_utf8_view name;
+    const gf_value* value;
+};
+struct gf_binding_record {
+    uint32_t struct_size;
+    uint32_t editable;
+    gf_utf8_view stable_id;
+    const gf_binding_field* fields;
+    uint64_t field_count;
+};
+struct gf_binding_column {
+    uint32_t struct_size;
+    gf_value_kind kind;
+    gf_utf8_view name;
+    uint32_t read_only;
+    uint32_t reserved;
+};
+struct gf_binding_sort_key {
+    uint32_t struct_size;
+    gf_binding_sort_direction direction;
+    gf_utf8_view column;
+};
+struct gf_binding_predicate {
+    uint32_t struct_size;
+    gf_binding_predicate_operator op;
+    gf_utf8_view column;
+    const gf_value* operand;
+};
+struct gf_binding_provider_callbacks {
+    uint32_t struct_size;
+    gf_binding_provider_flags flags;
+    void* context;
+    gf_status (*row_count)(void* context, uint64_t* count);
+    gf_status (*read_value)(void* context, uint64_t row, uint64_t column, gf_value* value);
+    gf_status (*read_stable_id)(void* context, uint64_t row, gf_utf8_view* stable_id);
+    gf_status (*write_value)(void* context, uint64_t row, uint64_t column, const gf_value* value, uint32_t* accepted, gf_utf8_view* reason);
+    gf_status (*read_cell_state)(void* context, uint64_t row, uint64_t column, uint32_t* read_only, gf_utf8_view* error);
+    gf_status (*apply_sort)(void* context, const gf_binding_sort_key* keys, uint64_t count);
+    gf_status (*apply_filter)(void* context, const gf_binding_predicate* predicates, uint64_t count);
+    gf_status (*insert_row)(void* context, uint64_t row, gf_utf8_view stable_id, const gf_value* values, uint64_t value_count, uint32_t* accepted);
+    gf_status (*remove_rows)(void* context, uint64_t row, uint64_t count, uint32_t* accepted);
+    void (*release)(void* context);
+};
+struct gf_bindings_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*bind)(const gf_binding_arguments* arguments, gf_object* binding);
+    gf_status (*unbind)(gf_object binding);
+    gf_status (*read_value)(gf_object binding, uint32_t* updated);
+    gf_status (*write_value)(gf_object binding, uint32_t* updated);
+    gf_status (*add_record)(gf_object source, const gf_binding_record* record, uint64_t* index);
+    gf_status (*insert_record)(gf_object source, uint64_t index, const gf_binding_record* record);
+    gf_status (*remove_record)(gf_object source, uint64_t index, uint32_t* removed);
+    gf_status (*clear_records)(gf_object source);
+    gf_status (*set_position)(gf_object source, int64_t position, uint32_t* moved);
+    gf_status (*position)(gf_object source, int64_t* position, uint64_t* count);
+    gf_status (*current_field)(gf_object source, gf_utf8_view field, gf_value* value, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+    gf_status (*set_current_field)(gf_object source, gf_utf8_view field, const gf_value* value, uint32_t* accepted);
+    gf_status (*add_records)(gf_object source, const gf_binding_record* records, uint64_t count, uint64_t* first);
+    gf_status (*set_provider)(gf_object source, const gf_binding_column* columns, uint64_t column_count, const gf_binding_provider_callbacks* callbacks, uint64_t* provider);
+    gf_status (*notify)(uint64_t provider, gf_binding_notification_kind kind, uint64_t row, uint64_t count, uint64_t target);
+    gf_status (*set_sort)(gf_object source, const gf_binding_sort_key* keys, uint64_t count);
+    gf_status (*set_filter)(gf_object source, const gf_binding_predicate* predicates, uint64_t count);
+    gf_status (*generation)(gf_object source, uint64_t* generation, uint64_t* count);
+    gf_status (*read_cell)(gf_object source, uint64_t generation, uint64_t row, uint64_t column, gf_value* value, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+};
+struct gf_subsurface_content {
+    uint32_t struct_size;
+    uint32_t opaque;
+    gf_callback build;
+};
+struct gf_subsurfaces_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*set_content)(gf_object host, const gf_subsurface_content* content);
+    gf_status (*set_root)(gf_object root);
+    gf_status (*state)(gf_object host, gf_subsurface_state* state);
+    gf_status (*content_epoch)(gf_object host, uint64_t* epoch);
+    gf_status (*failure)(gf_object host, char* buffer, uint64_t capacity, uint64_t* required);
+};
+struct gf_application_config {
+    uint32_t struct_size;
+    gf_theme_base theme_base;
+    const gf_theme_package* packages;
+    uint64_t package_count;
+    gf_presentation_source presentation_source;
+    uint32_t reserved;
+};
+struct gf_program_identity {
+    uint32_t struct_size;
+    uint32_t reserved;
+    gf_utf8_view product;
+    gf_utf8_view version;
+    gf_utf8_view vendor;
+    gf_utf8_view website;
+    gf_utf8_view copyright;
+    gf_utf8_view credits;
+};
+struct gf_application_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*create)(const gf_application_config* config, gf_theme_report* report);
+    gf_status (*close)(uint64_t* windows_alive);
+    gf_status (*state)(gf_application_state* state);
+    gf_status (*set_program_identity)(const gf_program_identity* identity);
+};
+struct gf_rule_condition {
+    uint32_t struct_size;
+    gf_rule_condition_kind kind;
+    gf_object object;
+    uint32_t physical_key;
+    uint32_t modifiers;
+    uint32_t negated;
+    uint32_t reserved;
+};
+struct gf_rule_action {
+    uint32_t struct_size;
+    gf_rule_action_kind kind;
+    gf_object target;
+    gf_utf8_view property;
+    const gf_value* value;
+    const gf_callback* callback;
+};
+struct gf_rule {
+    uint32_t struct_size;
+    gf_rule_flags flags;
+    gf_rule_trigger_kind trigger;
+    uint32_t physical_key;
+    gf_object source;
+    gf_utf8_view interaction;
+    uint64_t condition_count;
+    const gf_rule_condition* conditions;
+    uint64_t action_count;
+    const gf_rule_action* actions;
+};
+struct gf_rules_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*add)(gf_object window, const gf_rule* rule, gf_rule_token* token);
+    gf_status (*remove)(gf_rule_token token);
+    gf_status (*state)(gf_rule_token token, gf_rule_state* state);
+};
+struct gf_data_grid_column {
+    uint32_t struct_size;
+    gf_data_grid_column_kind kind;
+    gf_value_kind value_kind;
+    uint32_t read_only;
+    uint32_t hidden;
+    uint32_t reserved;
+    double width;
+    double minimum_width;
+    gf_utf8_view name;
+    gf_utf8_view header_text;
+    gf_utf8_view data_property_name;
+    const gf_utf8_view* items;
+    uint64_t item_count;
+};
+struct gf_data_grid_row {
+    uint32_t struct_size;
+    uint32_t read_only;
+    gf_utf8_view stable_id;
+    gf_utf8_view header_text;
+    const gf_value* cells;
+    uint64_t cell_count;
+};
+struct gf_data_grid_cell {
+    uint64_t row;
+    uint64_t column;
+};
+struct gf_data_grid_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*column_count)(gf_object grid, uint64_t* count);
+    gf_status (*column_at)(gf_object grid, uint64_t index, gf_data_grid_column* column, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+    gf_status (*column_item)(gf_object grid, uint64_t column, uint64_t item, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*insert_column)(gf_object grid, uint64_t index, const gf_data_grid_column* column);
+    gf_status (*remove_column)(gf_object grid, uint64_t index);
+    gf_status (*column_index)(gf_object grid, gf_utf8_view name, uint64_t* index);
+    gf_status (*set_column_header_text)(gf_object grid, uint64_t column, gf_utf8_view text);
+    gf_status (*set_column_width)(gf_object grid, uint64_t column, double width);
+    gf_status (*set_column_read_only)(gf_object grid, uint64_t column, uint32_t read_only);
+    gf_status (*set_column_hidden)(gf_object grid, uint64_t column, uint32_t hidden);
+    gf_status (*row_count)(gf_object grid, uint64_t* count, int64_t* new_row);
+    gf_status (*insert_rows)(gf_object grid, uint64_t index, const gf_data_grid_row* rows, uint64_t count);
+    gf_status (*append_rows)(gf_object grid, const gf_data_grid_row* rows, uint64_t count, uint64_t* first);
+    gf_status (*erase_rows)(gf_object grid, uint64_t index, uint64_t count);
+    gf_status (*replace_row)(gf_object grid, uint64_t index, const gf_data_grid_row* row);
+    gf_status (*clear_rows)(gf_object grid);
+    gf_status (*row_id)(gf_object grid, uint64_t position, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*row_position)(gf_object grid, gf_utf8_view row_id, uint64_t* position);
+    gf_status (*cell_value)(gf_object grid, gf_utf8_view row_id, uint64_t column, gf_value_kind as_kind, gf_value* value, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+    gf_status (*set_cell_value)(gf_object grid, gf_utf8_view row_id, uint64_t column, const gf_value* value, uint32_t* accepted);
+    gf_status (*cell_text)(gf_object grid, gf_utf8_view row_id, uint64_t column, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*read_cells)(gf_object grid, uint64_t column, uint64_t first_row, uint64_t row_count, gf_value* values, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+    gf_status (*current_cell)(gf_object grid, uint32_t* present, uint64_t* row, uint64_t* column);
+    gf_status (*set_current_cell)(gf_object grid, gf_utf8_view row_id, uint64_t column, uint32_t* moved);
+    gf_status (*selected_rows)(gf_object grid, uint64_t* positions, uint64_t capacity, uint64_t* count);
+    gf_status (*selected_cells)(gf_object grid, gf_data_grid_cell* cells, uint64_t capacity, uint64_t* count);
+    gf_status (*set_row_selected)(gf_object grid, gf_utf8_view row_id, uint32_t selected);
+    gf_status (*set_cell_selected)(gf_object grid, gf_utf8_view row_id, uint64_t column, uint32_t selected);
+    gf_status (*clear_selection)(gf_object grid);
+    gf_status (*select_all)(gf_object grid);
+    gf_status (*begin_edit)(gf_object grid, uint32_t select_all, uint32_t* began);
+    gf_status (*end_edit)(gf_object grid, uint32_t* committed);
+    gf_status (*cancel_edit)(gf_object grid);
+};
+struct gf_dock_panel {
+    uint32_t struct_size;
+    gf_dock_panel_kind kind;
+    gf_dock_allowed allowed;
+    uint32_t dock_as_document;
+    gf_dock_placement default_placement;
+    gf_dock_side default_side;
+    double default_ratio;
+    double default_extent;
+    gf_logical_rect default_frame;
+    gf_logical_size minimum_size;
+    gf_utf8_view id;
+    gf_utf8_view title;
+    gf_object content;
+    uint64_t reserved;
+};
+struct gf_dock_edit {
+    uint32_t struct_size;
+    gf_dock_edit_kind kind;
+    uint32_t subject_is_stack;
+    uint32_t subject_stack;
+    uint32_t target_node;
+    uint32_t site;
+    gf_dock_side side;
+    uint32_t index;
+    double ratio;
+    double extent;
+    gf_logical_rect frame;
+    gf_utf8_view panel;
+    uint64_t reserved;
+    gf_dock_document_presentation presentation;
+    gf_dock_frame_state frame_state;
+};
+struct gf_dock_location {
+    uint32_t struct_size;
+    gf_dock_placement placement;
+    uint32_t stack;
+    uint32_t index;
+    uint32_t site;
+    gf_dock_node_kind stack_kind;
+    gf_dock_side side;
+    uint32_t selected;
+    uint32_t stack_panel_count;
+    uint32_t reserved;
+};
+struct gf_dock_options {
+    uint32_t struct_size;
+    gf_dock_option_flags flags;
+    uint32_t area_background;
+    uint32_t reserved;
+};
+struct gf_dock_frame_memory {
+    uint32_t struct_size;
+    uint32_t present;
+    gf_logical_rect bounds;
+    gf_dock_frame_state state;
+    uint32_t icon_slot;
+    uint32_t order;
+    uint32_t reserved;
+};
+struct gf_docking_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*register_panel)(gf_object workspace, const gf_dock_panel* panel);
+    gf_status (*set_panel_content)(gf_object workspace, gf_utf8_view panel, gf_object content);
+    gf_status (*set_panel_title)(gf_object workspace, gf_utf8_view panel, gf_utf8_view title);
+    gf_status (*apply_edit)(gf_object workspace, const gf_dock_edit* edit, gf_dock_refusal* refusal);
+    gf_status (*locate)(gf_object workspace, gf_utf8_view panel, gf_dock_location* location);
+    gf_status (*save_layout)(gf_object workspace, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*load_layout)(gf_object workspace, gf_utf8_view xml, uint64_t* diagnostic_count);
+    gf_status (*activate_panel)(gf_object workspace, gf_utf8_view panel);
+    gf_status (*attach_windows)(gf_object workspace);
+    gf_status (*document_area)(gf_object workspace, uint32_t* node);
+    gf_status (*panel_at)(gf_object workspace, uint32_t stack, uint64_t index, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*floating_sites)(gf_object workspace, uint32_t* sites, uint64_t capacity, uint64_t* count);
+    gf_status (*floating_site)(gf_object workspace, uint32_t site, gf_logical_rect* frame, uint32_t* first_stack);
+    gf_status (*update_panel)(gf_object workspace, const gf_dock_panel* panel);
+    gf_status (*set_options)(gf_object workspace, const gf_dock_options* options);
+    gf_status (*set_floating_window_visibility)(gf_object workspace, uint32_t site, gf_dock_window_visibility visibility);
+    gf_status (*document_presentation)(gf_object workspace, gf_dock_document_presentation* presentation);
+    gf_status (*arrange_frames)(gf_object workspace, gf_dock_frame_arrangement arrangement, gf_dock_refusal* refusal);
+    gf_status (*frame_memory)(gf_object workspace, gf_utf8_view document, gf_dock_frame_memory* frame);
+    gf_status (*set_frame_icons_at_bottom)(gf_object workspace, uint32_t bottom);
+    gf_status (*area_document_count)(gf_object workspace, uint64_t* count);
+    gf_status (*area_document_at)(gf_object workspace, uint64_t index, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*area_active_document)(gf_object workspace, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*set_panel_menu_strip)(gf_object workspace, gf_utf8_view panel, gf_object strip);
+    gf_status (*merged_document)(gf_object workspace, char* buffer, uint64_t capacity, uint64_t* required);
+};
+struct gf_app_font_face {
+    uint32_t struct_size;
+    uint32_t reserved;
+    uint32_t weight;
+    uint32_t italic;
+    gf_bytes_view bytes;
+};
+struct gf_fonts_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*family_id)(gf_utf8_view name, uint32_t* family);
+    gf_status (*family_name)(uint32_t family, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*load_family)(gf_utf8_view name, const gf_app_font_face* faces, uint64_t face_count, uint32_t* family);
+    gf_status (*unload_family)(uint32_t family, uint32_t* deferred);
+};
+struct gf_help_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*attach)(gf_object system, gf_object window);
+    gf_status (*detach)(gf_object system, gf_object window);
+    gf_status (*load_built_in)(gf_object system, gf_utf8_view locale_xml);
+    gf_status (*show)(gf_object system, gf_utf8_view stable_id, uint32_t* shown);
+    gf_status (*show_navigator)(gf_object system, gf_help_navigator navigator, gf_utf8_view text, uint32_t* shown);
+    gf_status (*show_popup)(gf_object system, gf_utf8_view stable_id, gf_object anchor, uint32_t* shown);
+    gf_status (*resolve)(gf_object system, gf_object control, char* buffer, uint64_t capacity, uint64_t* required, uint32_t* home);
+    gf_status (*enter_help_mode)(gf_object system, gf_object window, uint32_t* entered);
+    gf_status (*cancel_help_mode)(gf_object system);
+    gf_status (*load_translation)(gf_object system, gf_utf8_view locale_xml);
+    gf_status (*load_user_overrides)(gf_object system, gf_utf8_view locale_xml);
+    gf_status (*clear_user_overrides)(gf_object system);
+    gf_status (*use_built_in_language)(gf_object system, uint32_t built_in_only);
+    gf_status (*export_template)(gf_object system, gf_utf8_view language, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*read_field)(gf_object system, gf_utf8_view stable_id, gf_locale_field field, char* buffer, uint64_t capacity, uint64_t* required, gf_locale_origin* origin);
+};
+struct gf_content_pixel_rect {
+    uint32_t x;
+    uint32_t y;
+    uint32_t width;
+    uint32_t height;
+};
+struct gf_content_frame {
+    uint32_t struct_size;
+    gf_content_pixel_format pixel_format;
+    uint32_t width;
+    uint32_t height;
+    uint64_t row_bytes;
+    uint32_t opaque;
+    uint32_t reserved;
+    gf_content_pixel_rect damage;
+    gf_bytes_view pixels;
+};
+struct gf_content_request {
+    uint32_t struct_size;
+    uint32_t width;
+    uint32_t height;
+    uint32_t reserved;
+    double scale;
+    uint64_t generation;
+};
+struct gf_content_semantics {
+    uint32_t struct_size;
+    uint32_t reserved;
+    gf_utf8_view name;
+    gf_utf8_view text;
+    gf_utf8_view description;
+};
+struct gf_content_statistics {
+    uint32_t struct_size;
+    gf_content_publish_result last_refusal;
+    uint64_t frames_published;
+    uint64_t frames_refused;
+    uint64_t frames_dropped;
+    uint64_t heartbeats;
+    uint64_t stale_transitions;
+    uint64_t recoveries;
+    uint64_t semantics_published;
+    uint64_t semantics_refused;
+    uint64_t after_revocation;
+};
+struct gf_content_program {
+    uint32_t struct_size;
+    uint32_t opaque;
+    gf_callback run;
+};
+struct gf_hosted_options {
+    uint32_t struct_size;
+    uint32_t opaque;
+    gf_utf8_view executable;
+    const gf_utf8_view* arguments;
+    uint64_t argument_count;
+    uint64_t slot_bytes;
+    uint64_t start_timeout_ms;
+    uint64_t stop_grace_ms;
+};
+struct gf_hosted_input_report {
+    uint32_t struct_size;
+    uint32_t connected;
+    uint64_t dropped;
+};
+struct gf_content_text_line {
+    uint64_t start;
+    uint64_t end;
+    gf_logical_rect bounds;
+};
+struct gf_content_text_cluster {
+    uint64_t start;
+    uint64_t end;
+    uint32_t line;
+    uint32_t right_to_left;
+    gf_logical_rect bounds;
+};
+struct gf_content_caret_stop {
+    uint64_t offset;
+    gf_logical_rect caret;
+};
+struct gf_content_layout_transform {
+    double xx;
+    double xy;
+    double yx;
+    double yy;
+    double dx;
+    double dy;
+};
+struct gf_content_quad {
+    gf_logical_point top_left;
+    gf_logical_point top_right;
+    gf_logical_point bottom_right;
+    gf_logical_point bottom_left;
+};
+struct gf_content_text_layout {
+    uint32_t struct_size;
+    uint32_t reserved;
+    uint64_t text_revision;
+    const gf_content_text_line* lines;
+    uint64_t line_count;
+    const gf_content_text_cluster* clusters;
+    uint64_t cluster_count;
+    const gf_content_caret_stop* carets;
+    uint64_t caret_count;
+    uint32_t transformed;
+    uint32_t transform_reserved;
+    gf_content_layout_transform transform;
+};
+struct gf_content_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*open_content)(gf_object surface, uint32_t opaque, gf_content_sink* sink);
+    gf_status (*close_content)(gf_object surface);
+    gf_status (*start_program)(gf_object surface, const gf_content_program* program);
+    gf_status (*start_hosted)(gf_object surface, const gf_hosted_options* options);
+    gf_status (*terminate)(gf_object surface);
+    gf_status (*set_termination_grace)(gf_object surface, uint64_t milliseconds);
+    gf_status (*set_stale_interval)(gf_object surface, uint64_t milliseconds);
+    gf_status (*status)(gf_object surface, gf_content_status* status);
+    gf_status (*failure)(gf_object surface, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*statistics)(gf_object surface, gf_content_statistics* statistics);
+    gf_status (*request)(gf_object surface, gf_content_request* request);
+    gf_status (*set_status_caption)(gf_object surface, gf_content_status status, gf_utf8_view caption);
+    gf_status (*set_semantics)(gf_object surface, const gf_content_semantics* semantics);
+    gf_status (*program_running)(gf_object surface, uint32_t* running);
+    gf_status (*hosted_input)(gf_object surface, gf_hosted_input_report* report);
+    gf_status (*hosted_support)(gf_hosted_support* support);
+    gf_status (*sink_publish)(gf_content_sink sink, const gf_content_frame* frame, gf_content_publish_result* result);
+    gf_status (*sink_heartbeat)(gf_content_sink sink);
+    gf_status (*sink_publish_semantics)(gf_content_sink sink, const gf_content_semantics* semantics, gf_content_semantics_result* result);
+    gf_status (*sink_request)(gf_content_sink sink, gf_content_request* request);
+    gf_status (*sink_wait_for_request)(gf_content_sink sink, uint64_t seen_generation, uint64_t timeout_ms, gf_content_request* request);
+    gf_status (*sink_state)(gf_content_sink sink, uint32_t* revoked, uint32_t* stop_requested);
+    gf_status (*sink_statistics)(gf_content_sink sink, gf_content_statistics* statistics);
+    gf_status (*sink_release)(gf_content_sink sink);
+    gf_status (*program_sink)(gf_content_sink* sink);
+    gf_status (*program_fail)(gf_utf8_view message);
+    gf_status (*editor_text_revision)(gf_object editor, uint64_t* revision);
+    gf_status (*editor_text)(gf_object editor, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*editor_set_text)(gf_object editor, gf_utf8_view text);
+    gf_status (*editor_submit_layout)(gf_object editor, const gf_content_text_layout* layout, gf_content_layout_result* result);
+    gf_status (*editor_layout_current)(gf_object editor, uint32_t* current);
+    gf_status (*editor_open_frames)(gf_object editor, uint32_t opaque, gf_content_sink* sink);
+    gf_status (*editor_caret_rectangle)(gf_object editor, uint32_t* present, gf_logical_rect* rectangle);
+    gf_status (*editor_selection_rectangles)(gf_object editor, gf_logical_rect* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*editor_position_at)(gf_object editor, gf_logical_point point, uint64_t* offset);
+    gf_status (*editor_set_draws_selection)(gf_object editor, uint32_t draws);
+    gf_status (*editor_set_multiline)(gf_object editor, uint32_t multiline);
+    gf_status (*editor_set_read_only)(gf_object editor, uint32_t read_only);
+    gf_status (*editor_set_accepts_tab)(gf_object editor, uint32_t accepts);
+    gf_status (*editor_replace_selection)(gf_object editor, gf_utf8_view replacement, uint32_t* applied);
+    gf_status (*editor_delete_selection)(gf_object editor, uint32_t* applied);
+    gf_status (*editor_composition_range)(gf_object editor, uint32_t* present, uint64_t* start, uint64_t* end);
+    gf_status (*editor_caret_quad)(gf_object editor, uint32_t* present, gf_content_quad* quad);
+    gf_status (*editor_selection_quads)(gf_object editor, gf_content_quad* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*editor_composition_quads)(gf_object editor, gf_content_quad* buffer, uint64_t capacity, uint64_t* required);
+};
+struct gf_list_view_column {
+    uint32_t struct_size;
+    gf_list_view_alignment alignment;
+    double width;
+    gf_utf8_view stable_id;
+    gf_utf8_view text;
+};
+struct gf_list_view_item {
+    uint32_t struct_size;
+    uint32_t checked;
+    gf_utf8_view stable_id;
+    gf_utf8_view text;
+    gf_utf8_view image_key;
+    gf_utf8_view group;
+    const gf_utf8_view* sub_items;
+    uint64_t sub_item_count;
+};
+struct gf_list_view_group {
+    uint32_t struct_size;
+    gf_list_view_alignment header_alignment;
+    gf_utf8_view stable_id;
+    gf_utf8_view header;
+};
+struct gf_list_view_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*column_count)(gf_object view, uint64_t* count);
+    gf_status (*column_at)(gf_object view, uint64_t index, gf_list_view_column* column, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+    gf_status (*set_columns)(gf_object view, const gf_list_view_column* columns, uint64_t count);
+    gf_status (*set_column_width)(gf_object view, uint64_t column, double width);
+    gf_status (*item_count)(gf_object view, uint64_t* count);
+    gf_status (*item_at)(gf_object view, uint64_t index, gf_list_view_item* item, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+    gf_status (*item_sub_item)(gf_object view, uint64_t index, uint64_t sub_item, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*set_items)(gf_object view, const gf_list_view_item* items, uint64_t count);
+    gf_status (*index_of)(gf_object view, gf_utf8_view item_id, uint64_t* index);
+    gf_status (*set_item_checked)(gf_object view, uint64_t index, uint32_t checked);
+    gf_status (*group_count)(gf_object view, uint64_t* count);
+    gf_status (*group_at)(gf_object view, uint64_t index, gf_list_view_group* group, char* text_buffer, uint64_t text_capacity, uint64_t* text_required);
+    gf_status (*set_groups)(gf_object view, const gf_list_view_group* groups, uint64_t count);
+    gf_status (*selected_items)(gf_object view, uint64_t* indices, uint64_t capacity, uint64_t* count);
+    gf_status (*set_selected)(gf_object view, uint64_t index, uint32_t selected);
+    gf_status (*select_all)(gf_object view);
+    gf_status (*clear_selection)(gf_object view);
+    gf_status (*focused_item)(gf_object view, int64_t* index);
+    gf_status (*set_focused_item)(gf_object view, int64_t index);
+    gf_status (*ensure_visible)(gf_object view, uint64_t index);
+    gf_status (*set_sort_indicator)(gf_object view, int64_t column, gf_list_view_sort_order order);
+    gf_status (*sort_items)(gf_object view, uint64_t column, gf_list_view_sort_order order);
+};
+struct gf_windows_paint_endpoint_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*acquire)(gf_object control, uint32_t width, uint32_t height, gf_paint_endpoint* endpoint, uint64_t* compatibility_handle);
+    gf_status (*configure)(gf_paint_endpoint endpoint, uint32_t width, uint32_t height);
+    gf_status (*touch)(gf_paint_endpoint endpoint, uint32_t explicit_boundary);
+    gf_status (*drain)(gf_paint_endpoint endpoint);
+    gf_status (*snapshot)(gf_paint_endpoint endpoint, char* buffer, uint64_t capacity, uint64_t* required);
+    gf_status (*submit_bgra)(uint64_t compatibility_handle, uint32_t width, uint32_t height, uint64_t row_bytes, const uint8_t* pixels);
+    gf_status (*release)(gf_paint_endpoint endpoint);
+    gf_status (*get_dc)(uint64_t compatibility_handle, uint64_t* device_context);
+    gf_status (*release_dc)(uint64_t compatibility_handle, uint64_t device_context);
+    gf_status (*publish_dc)(uint64_t device_context);
+    gf_status (*begin_write)(uint64_t device_context, gf_paint_write_lease* lease);
+    gf_status (*end_write)(gf_paint_write_lease lease, uint32_t publish);
+};
+struct gf_segment_header {
+    uint32_t struct_size;
+    gf_class_id class_id;
+};
+struct gf_class_header {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_class_id class_id;
+    uint32_t segment_count;
+    void (*release)(void* instance);
+};
+struct gf_control_hooks {
+    uint32_t struct_size;
+    gf_class_id class_id;
+    gf_hook_entry on_auto_size_changed;
+    gf_hook_entry on_back_color_changed;
+    gf_hook_entry on_causes_validation_changed;
+    gf_hook_entry on_cursor_changed;
+    gf_hook_entry on_dock_changed;
+    gf_hook_entry on_enabled_changed;
+    gf_hook_entry on_fore_color_changed;
+    gf_hook_entry on_margin_changed;
+    gf_hook_entry on_padding_changed;
+    gf_hook_entry on_right_to_left_changed;
+    gf_hook_entry on_tab_index_changed;
+    gf_hook_entry on_tab_stop_changed;
+    gf_hook_entry on_visible_changed;
+    gf_hook_entry on_change_ui_cues;
+    gf_hook_entry on_click;
+    gf_hook_entry on_double_click;
+    gf_hook_entry on_drag_drop;
+    gf_hook_entry on_drag_enter;
+    gf_hook_entry on_drag_leave;
+    gf_hook_entry on_drag_over;
+    gf_hook_entry on_enter;
+    gf_hook_entry on_got_focus;
+    gf_hook_entry on_help_requested;
+    gf_hook_entry on_key_down;
+    gf_hook_entry on_key_press;
+    gf_hook_entry on_key_up;
+    gf_hook_entry on_layout;
+    gf_hook_entry on_leave;
+    gf_hook_entry on_lost_focus;
+    gf_hook_entry on_mouse_capture_changed;
+    gf_hook_entry on_mouse_click;
+    gf_hook_entry on_mouse_double_click;
+    gf_hook_entry on_mouse_down;
+    gf_hook_entry on_mouse_enter;
+    gf_hook_entry on_mouse_hover;
+    gf_hook_entry on_mouse_leave;
+    gf_hook_entry on_mouse_move;
+    gf_hook_entry on_mouse_up;
+    gf_hook_entry on_mouse_wheel;
+    gf_hook_entry on_paint_background;
+    gf_hook_entry on_preview_key_down;
+    gf_hook_entry on_validated;
+    gf_hook_entry on_validating;
+};
+struct gf_masked_text_box_hooks {
+    uint32_t struct_size;
+    gf_class_id class_id;
+    gf_hook_entry on_mask_changed;
+};
+struct gf_picture_box_hooks {
+    uint32_t struct_size;
+    gf_class_id class_id;
+    gf_hook_entry on_size_mode_changed;
+};
+struct gf_combo_box_hooks {
+    uint32_t struct_size;
+    gf_class_id class_id;
+    gf_hook_entry on_drop_down_style_changed;
+};
+struct gf_data_grid_view_hooks {
+    uint32_t struct_size;
+    gf_class_id class_id;
+    gf_hook_entry on_allow_user_to_delete_rows_changed;
+    gf_hook_entry on_allow_user_to_order_columns_changed;
+    gf_hook_entry on_allow_user_to_resize_columns_changed;
+    gf_hook_entry on_allow_user_to_resize_rows_changed;
+    gf_hook_entry on_alternating_rows_default_cell_style_changed;
+    gf_hook_entry on_auto_size_columns_mode_changed;
+    gf_hook_entry on_auto_size_rows_mode_changed;
+    gf_hook_entry on_background_color_changed;
+    gf_hook_entry on_border_style_changed;
+    gf_hook_entry on_cell_border_style_changed;
+    gf_hook_entry on_column_headers_border_style_changed;
+    gf_hook_entry on_column_headers_default_cell_style_changed;
+    gf_hook_entry on_column_headers_height_changed;
+    gf_hook_entry on_default_cell_style_changed;
+    gf_hook_entry on_edit_mode_changed;
+    gf_hook_entry on_grid_color_changed;
+    gf_hook_entry on_multi_select_changed;
+    gf_hook_entry on_read_only_changed;
+    gf_hook_entry on_row_headers_border_style_changed;
+    gf_hook_entry on_row_headers_default_cell_style_changed;
+    gf_hook_entry on_row_headers_width_changed;
+    gf_hook_entry on_rows_default_cell_style_changed;
+};
+struct gf_check_box_hooks {
+    uint32_t struct_size;
+    gf_class_id class_id;
+    gf_hook_entry on_appearance_changed;
+    gf_hook_entry on_checked_changed;
+    gf_hook_entry on_check_state_changed;
+};
+struct gf_radio_button_hooks {
+    uint32_t struct_size;
+    gf_class_id class_id;
+    gf_hook_entry on_checked_changed;
+};
+struct gf_range_control_hooks {
+    uint32_t struct_size;
+    gf_class_id class_id;
+    gf_hook_entry on_value_changed;
+};
+struct gf_numeric_up_down_hooks {
+    uint32_t struct_size;
+    gf_class_id class_id;
+    gf_hook_entry on_value_changed;
+};
+struct gf_date_time_picker_hooks {
+    uint32_t struct_size;
+    gf_class_id class_id;
+    gf_hook_entry on_format_changed;
+    gf_hook_entry on_value_changed;
+};
+struct gf_node_canvas_hooks {
+    uint32_t struct_size;
+    gf_class_id class_id;
+    gf_hook_entry on_edit_ended;
+    gf_hook_entry on_graph_edited;
+    gf_hook_entry on_link_connected;
+    gf_hook_entry on_palette_requested;
+    gf_hook_entry on_selection_changed;
+    gf_hook_entry on_view_changed;
+};
+struct gf_button_base_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_button_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_link_label_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_label_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_picture_box_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+    const gf_picture_box_hooks* picture_box;
+};
+struct gf_progress_bar_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+    const gf_range_control_hooks* range_control;
+};
+struct gf_sweep_scope_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+    const gf_range_control_hooks* range_control;
+};
+struct gf_list_box_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_check_box_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+    const gf_check_box_hooks* check_box;
+};
+struct gf_radio_button_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+    const gf_radio_button_hooks* radio_button;
+};
+struct gf_range_control_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+    const gf_range_control_hooks* range_control;
+};
+struct gf_track_bar_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+    const gf_range_control_hooks* range_control;
+};
+struct gf_panel_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_group_box_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_material_panel_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_card_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_container_control_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_user_control_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_page_strip_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_page_view_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_navigation_pane_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_dock_site_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_dock_navigator_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_scaled_panel_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_scrollable_control_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_scroll_bar_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+    const gf_range_control_hooks* range_control;
+};
+struct gf_tool_strip_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_gauge_base_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+    const gf_range_control_hooks* range_control;
+};
+struct gf_dial_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+    const gf_range_control_hooks* range_control;
+};
+struct gf_raster_canvas_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_text_box_base_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_list_control_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_up_down_base_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+};
+struct gf_node_canvas_class {
+    gf_class_header header;
+    const gf_control_hooks* control;
+    const gf_node_canvas_hooks* node_canvas;
+};
+struct gf_classes_table {
+    uint32_t struct_size;
+    uint32_t abi_minor;
+    gf_status (*create)(const gf_class_header* table, gf_utf8_view stable_id, void* instance, gf_object* object);
+    gf_status (*base_raiser)(gf_class_id class_id, uint32_t entry, gf_base_raiser* raiser);
+};
+gf_status gf_abi_get_table(gf_table_id table_id, uint32_t abi_major, uint32_t abi_minor, void* table, uint64_t table_capacity);
