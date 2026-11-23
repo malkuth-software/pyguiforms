@@ -1,0 +1,33 @@
+# The source distribution and editable installs: pure Python, without the
+# library (set GUI_FORMS_ABI_LIBRARY). The platform wheels, which carry the
+# library, are made by tools/build_wheel.py from a gui_forms CI artifact.
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyguiforms"
+version = "0.1.0.dev0"
+description = "Python bindings for GUI.Forms, over its C ABI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Malkuth Software" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: User Interfaces",
+]
+
+[project.urls]
+Source = "https://github.com/malkuth-software/pyguiforms"
+"GUI.Forms" = "https://github.com/malkuth-software/gui_forms"
+
+[tool.setuptools]
+packages = ["pyguiforms"]

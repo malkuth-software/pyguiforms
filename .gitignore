@@ -2,3 +2,7 @@ __pycache__/
 *.so
 *.o
 bench/_gf_cffi_api.c
+dist/
+wheelhouse/
+build/
+*.egg-info/
