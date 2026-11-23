@@ -1,0 +1,51 @@
+# Checks every push and pull request: the generated layers against the
+# pinned gui_forms inputs, then the tests on each platform and Python.
+#
+# The window tests need a gui_forms_abi1 library. gui_forms CI publishes
+# none yet, so here they skip (tests/test_window.py: "no gui_forms_abi1
+# library"); they run where GUI_FORMS_ABI_LIBRARY names one.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generated:
+    name: Generated layers and input lock
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      # Verifies abi/ against abi/gui_forms.lock, then that _abi.py, the cffi
+      # declarations and _controls.py are what the pinned inputs give.
+      - name: Check the generated files
+        run: python tools/abi_python.py --check
+
+  tests:
+    name: Tests (${{ matrix.os }}, Python ${{ matrix.python }})
+    needs: generated
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Run the tests
+        run: python -X dev -m unittest discover -v -s tests -t .

@@ -1,0 +1,4 @@
+# Generated and pinned files are compared byte for byte (abi_python.py --check,
+# abi/gui_forms.lock), so every checkout keeps LF line ends, on Windows too.
+* text=auto eol=lf
+abi/*.json -text
