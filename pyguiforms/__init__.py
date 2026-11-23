@@ -1,5 +1,41 @@
-"""Python bindings over GUI.Forms' C ABI (study prototype).
+"""Python bindings for GUI.Forms, over its C ABI (``gui_forms_abi1``).
 
-``_abi`` is generated from gui_forms' ABI manifest (tools/abi_python.py);
-``native`` is the hand-written ownership, callback and failure layer.
+    import pyguiforms
+
+    window = pyguiforms.Window("Hello", 320, 120)
+    button = pyguiforms.Button(text="Close", bounds=(24, 24, 120, 32))
+    window.add(button)
+
+    @button.on("click")
+    def clicked(event):
+        window.close()
+
+    window.run()
+
+Layers, from the bottom: ``_abi`` (generated from the pinned ABI manifest:
+records, slots, constants), ``native`` (ownership, callbacks, failures and
+the UI-thread rule), ``schema`` (the library's own type list), ``values``
+(Python values as ``gf_value``), and the Pythonic classes: ``controls``,
+``_controls`` (one class per schema type, generated from the pinned control
+schema) and ``window``. The library loads on the first object created.
 """
+
+from __future__ import annotations
+
+from pyguiforms._controls import *  # noqa: F401,F403 (the generated classes, listed in its __all__)
+from pyguiforms.controls import Component
+from pyguiforms.controls import Control
+from pyguiforms.controls import Property
+from pyguiforms.native import CallbackFailure
+from pyguiforms.native import Event
+from pyguiforms.native import GuiFormsError
+from pyguiforms.native import Subscription
+from pyguiforms.native import WrongThreadError
+from pyguiforms.native import set_failure_hook
+from pyguiforms.values import Font
+from pyguiforms.values import Insets
+from pyguiforms.values import Point
+from pyguiforms.values import Rect
+from pyguiforms.values import Size
+from pyguiforms.values import rgba
+from pyguiforms.window import Window

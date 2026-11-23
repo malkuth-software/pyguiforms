@@ -1,0 +1,4 @@
+# The gui_forms commit the bindings are generated from (tools/pin_gui_forms.py).
+commit 1ed2f277ad4a58f6abc71e3209e34922c488b376
+sha256 cc53928a0a4affb7ab381acd6783a52321c361085fc254a7a166d47c9edf1c83 gf_abi.json manifests/abi/gf_abi.json
+sha256 fe23b14f42312221a79cde5bb9a85ecf54478b7879f702cd839defc103af61ff control-schema.json manifests/control-schema.json
