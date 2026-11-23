@@ -30,7 +30,10 @@ ROOT: pathlib.Path = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "bench"))
 
-from pyguiforms import _abi, native  # noqa: E402
+from pyguiforms import _abi  # noqa: E402
+from pyguiforms import controls  # noqa: E402
+from pyguiforms import native  # noqa: E402
+from pyguiforms import values  # noqa: E402
 
 N: int = 200000
 ROUNDS: int = 5
@@ -44,6 +47,14 @@ class Counter:
 
     def on_click(self, event: native.Event) -> None:
         self.calls += 1
+
+
+class BenchText:
+    """Encoded text and a view of it, made once outside the timed loops."""
+
+    def __init__(self, text: str) -> None:
+        self.encoded: bytes = text.encode("utf-8")
+        self.view: _abi.gf_utf8_view = values.text_view(self.encoded)
 
 
 def best_of(workload: object) -> float:
@@ -65,15 +76,15 @@ class CtypesWorkloads:
         self.set = session.properties.set
         self.button: int = button.identity
         self.bare: int = bare.identity
-        self.name: native.Utf8Text = native.Utf8Text("text")
-        self.text: native.Utf8Text = native.Utf8Text("Click me")
+        self.name: BenchText = BenchText("text")
+        self.text: BenchText = BenchText("Click me")
         self.value: _abi.gf_value = _abi.gf_value()
         self.value.struct_size = ctypes.sizeof(self.value)
         self.value.kind = _abi.GF_VALUE_KIND_TEXT
         self.value.text = self.text.view
         self.value_reference = ctypes.byref(self.value)
         self.raiser: _abi.gf_base_raiser = _abi.gf_base_raiser()
-        session.library.check(session.classes.base_raiser(_abi.GF_CLASS_CONTROL, native.control_hook_entry("on_click"),
+        session.library.check(session.classes.base_raiser(_abi.GF_CLASS_CONTROL, controls.RAISERS["click"].entry,
                                                           ctypes.byref(self.raiser)))
         self.event: _abi.gf_event = _abi.gf_event()
         self.event.struct_size = ctypes.sizeof(self.event)
@@ -87,7 +98,7 @@ class CtypesWorkloads:
         self.raw_callback: _abi.gf_callback = _abi.gf_callback()
         self.raw_callback.struct_size = ctypes.sizeof(self.raw_callback)
         self.raw_callback.invoke = self.raw_invoke
-        click: native.Utf8Text = native.Utf8Text("click")
+        click: BenchText = BenchText("click")
         self.raw_subscription: _abi.gf_subscription = _abi.gf_subscription(0)
         session.library.check(session.events.subscribe(self.raw, click.view, ctypes.byref(self.raw_callback),
                                                        ctypes.byref(self.raw_subscription)))
@@ -191,7 +202,7 @@ class CffiWorkloads:
         self.value.text.data = self.text_bytes
         self.value.text.size = 8
         self.raiser = self.ffi.new("gf_base_raiser*")
-        status = self.classes.base_raiser(_abi.GF_CLASS_CONTROL, native.control_hook_entry("on_click"), self.raiser)
+        status = self.classes.base_raiser(_abi.GF_CLASS_CONTROL, controls.RAISERS["click"].entry, self.raiser)
         assert status == 0, status
         self.event = self.ffi.new("gf_event*")
         self.event.struct_size = self.ffi.sizeof("gf_event")
@@ -267,17 +278,17 @@ def run_cffi(workloads: CffiWorkloads) -> None:
 
 def main() -> int:
     print("python", sys.version.split()[0], sys.implementation.name, "N", N, "best of", ROUNDS, flush=True)
-    session: native.Session = native.open_session()
+    session: native.Session = native.session()
     print(session.version(), flush=True)
     root: native.ObjectReference = session.create("panel", "bench.root")
     button: native.ObjectReference = session.create_from_class("gf_button_class", _abi.GF_CLASS_BUTTON, "bench.button")
     bare: native.ObjectReference = session.create_from_class("gf_button_class", _abi.GF_CLASS_BUTTON, "bench.bare")
-    session.insert_child(root, button, 0)
-    session.insert_child(root, bare, 1)
+    session.insert_child(root.identity, button.identity, 0)
+    session.insert_child(root.identity, bare.identity, 1)
     raw: native.ObjectReference = session.create_from_class("gf_button_class", _abi.GF_CLASS_BUTTON, "bench.raw")
-    session.insert_child(root, raw, 2)
+    session.insert_child(root.identity, raw.identity, 2)
     counter: Counter = Counter()
-    subscription: native.Subscription = session.subscribe(button, "click", counter.on_click)
+    subscription: native.Subscription = session.subscribe(button.identity, "click", counter.on_click, False)
     if "--cffi-abi" in sys.argv or "--cffi-api" in sys.argv:
         subscription.disconnect()
         mode: str = "cffi-api" if "--cffi-api" in sys.argv else "cffi-abi"
