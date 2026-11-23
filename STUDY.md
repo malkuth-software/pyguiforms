@@ -491,6 +491,16 @@ Two findings from the runs:
 
 ## 7. Decisions for the owner
 
+**Ruled by the owner, 2026-11-23:** every recommendation below is accepted:
+- ctypes for the generated layer;
+- the generator lives here against a pinned manifest;
+- a callback exception closes the window and is raised from `run()`, with a hook to carry on instead;
+- the API is idiomatic Python with the schema's names;
+- CPython 3.10 and newer, free-threaded builds included;
+- wheels take the library from gui_forms CI's artifacts.
+
+The LICENSE copyright line is "Malkuth Software".
+
 **Decision 1: binding technology for the generated layer.**
 1. **ctypes** (standard library). No dependency and no compiler. One wheel
    per platform for every CPython version, free-threaded builds and PyPy.
