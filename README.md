@@ -26,9 +26,13 @@ window.run()
 - `pyguiforms/_abi.py` and `pyguiforms/_controls.py`: generated. Do not edit.
 - `pyguiforms/native.py`, `schema.py`, `values.py`, `controls.py`,
   `window.py`: the hand-written layers.
+- `pyguiforms/forms.py` and `binding.py`: form documents (`.form`) loaded
+  from Python and bound to model `Value`s; `themes.py`: theme sheets;
+  `automation.py`: the controls as model tools and an MCP server.
 - `tests/`: `python -m unittest discover -s tests -t .` (pytest also
   collects them); the window tests need `GUI_FORMS_ABI_LIBRARY`.
-- `examples/`: `first_window.py` and the study's `one_button.py`.
+- `examples/`: `first_window.py`, `form_document.py` (a form, a theme
+  sheet and model tools) and the study's `one_button.py`.
 - `bench/`: the binding-technology measurements.
 
 MIT licence (`LICENSE`).

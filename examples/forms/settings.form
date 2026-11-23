@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The form-document example's window (examples/form_document.py). -->
+<form xmlns="urn:gui-forms:form:1" id="settings.window"
+    text="Settings"
+    client-size="360 150"
+    accept-button="settings.ok">
+  <panel id="settings.root">
+    <check-box id="settings.autosave" text="Save automatically" bounds="16 16 240 28">
+      <bind property="checked" to="autosave"/>
+    </check-box>
+    <label id="settings.status" text="Not saved yet." bounds="16 56 328 28" classes="status"/>
+    <button id="settings.ok" text="OK" bounds="256 104 88 32"/>
+  </panel>
+</form>

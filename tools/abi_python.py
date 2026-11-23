@@ -342,6 +342,13 @@ def definition_key(listed: dict) -> str:
     return key
 
 
+def json_items(items: list[str]) -> list[str]:
+    spelled: list[str] = []
+    for item in items:
+        spelled.append(json.dumps(item))
+    return spelled
+
+
 def property_doc(listed: dict) -> str:
     words: list[str] = [listed["kind"]]
     if listed["enumeration"] is not None:
@@ -399,9 +406,15 @@ def render_controls(document: dict) -> str:
     ]
     for definition in definitions.values():
         listed: dict = definition.listed
-        lines.append(definition.variable + " = Property(" + json.dumps(listed["name"]) + ", " +
-                     json.dumps(listed["kind"]) + ", " + str(bool(listed["writable"])) + ", " +
-                     json.dumps(property_doc(listed)) + ")")
+        arguments: list[str] = [json.dumps(listed["name"]), json.dumps(listed["kind"]),
+                                str(bool(listed["writable"])), json.dumps(property_doc(listed))]
+        if len(listed["choices"]) > 0:
+            arguments.append("choices=(" + ", ".join(json_items(listed["choices"])) + ",)")
+        if listed["bindable"]:
+            arguments.append("bindable=True")
+        if listed["serialization"] == "content":
+            arguments.append("content=True")
+        lines.append(definition.variable + " = Property(" + ", ".join(arguments) + ")")
     type_lines: list[str] = []
     for listed_type in types:
         class_name: str = listed_type["type"]

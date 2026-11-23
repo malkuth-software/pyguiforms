@@ -45,17 +45,20 @@ class WindowSubscriber:
 
 
 class Window:
-    """A window: its title, client size, minimum size and root panel."""
+    """A window: its title, client size, minimum size and root control (a new panel unless one is given)."""
 
     def __init__(self, title: str = "", width: float = 640.0, height: float = 480.0, minimum_width: float = 0.0,
-                 minimum_height: float = 0.0, stable_id: str | None = None) -> None:
+                 minimum_height: float = 0.0, stable_id: str | None = None,
+                 root: controls.Control | None = None) -> None:
         self.title: str = title
         self.width: float = width
         self.height: float = height
         self.minimum_width: float = minimum_width
         self.minimum_height: float = minimum_height
         self.session: native.Session = native.session()
-        self.root: _controls.Panel = _controls.Panel(stable_id)
+        # The control the run makes a window for: a new panel, or one given
+        # (a form document's root control).
+        self.root: controls.Control = root if root is not None else _controls.Panel(stable_id)
         self.moments: dict[str, HandlerList] = {}
         for moment in RUN_MOMENTS:
             self.moments[moment] = HandlerList()

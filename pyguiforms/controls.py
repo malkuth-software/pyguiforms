@@ -33,12 +33,23 @@ Handler = typing.Callable[[native.Event], None]
 
 
 class Property:
-    """One schema property as a descriptor: the name, the schema's kind word and whether it is writable."""
+    """One schema property as a descriptor.
 
-    def __init__(self, name: str, kind: str, writable: bool, doc: str) -> None:
+    It carries what the pinned schema says of it: the name, the kind word,
+    whether it is writable and bindable, an enumeration's choice names, and
+    whether it is a content value (a font or colour that is the control's
+    content, not its look). The form-document loader checks documents
+    against these; the library's own schema decides at run time.
+    """
+
+    def __init__(self, name: str, kind: str, writable: bool, doc: str, choices: tuple[str, ...] = (),
+                 bindable: bool = False, content: bool = False) -> None:
         self.name: str = name
         self.kind: str = kind
         self.writable: bool = writable
+        self.choices: tuple[str, ...] = choices
+        self.bindable: bool = bindable
+        self.content: bool = content
         self.__doc__ = doc
 
     def __get__(self, component: Component | None, owner: type) -> object:
